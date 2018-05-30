@@ -1,0 +1,18 @@
+<img src='https://www.diplomaticourier.com/wp-content/uploads/2014/10/k2_items_src_4cd5973a7c2085986240cae9b1f23d5c-900x450.jpg' class='bg' alt='background'>
+     
+
+
+body  {
+  color: aliceblue;
+}
+
+.title, .whatDo, .toDo, .passBox  {
+  border: 1px solid #7cdcde;
+  background-color: rgb(42, 137, 202);
+}
+
+
+.passwordLock {
+  width: 50%;
+  border: 1px solid #fbfef8;
+}

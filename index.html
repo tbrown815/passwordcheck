@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='description' content='password checker and generator' />
+
+    <!-- Responsive viewport tag, tells small screens that it's responsive -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>Do you need a BETTER password?</title>
+
+    <!-- fonts  -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    
+        <!-- reset -->
+    <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css'>
+
+    <!-- styles -->
+    <link href='index.css' rel='stylesheet' type='text/css' />
+    <link href='grid_v2.css' rel='stylesheet' type='text/css' />
+
+    <!-- jQuery -->
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+
+  </head>
+
+  <body>
+    <header role='heading' class='row' aria-level='1'>
+        <img src='https://www.diplomaticourier.com/wp-content/uploads/2014/10/k2_items_src_4cd5973a7c2085986240cae9b1f23d5c-900x450.jpg' class='bg' alt='background'>        
+    </header>
+    
+    <nav class='title col-12'>
+        <h1>Do you need a <u>BETTER</u> password?</h1>
+    </nav>
+    
+    
+    <main role='main'>
+        
+        
+        <div role='presentation' class='whatDo js-whatDo row'>
+            <div class='leftSide leftWhatDo js-leftWhatDo col-6'>
+                <p>
+                    <h2>Enter a password to compare against a database of known compromised passwords or 
+                        generate a new <span class='emph'>secure</span> password or passphrase.  Make a selection below to get started!</h2>
+                    </p>
+                    <br>
+                    <h6><a href='#openModal'>How do we it? Click here!</a></h6>
+                    <div id='openModal' class='pageModal modalContent'>
+                        <div>
+                            <a href='#close' title='Close' class='close'>X</a>
+                            <h2 class='howWeModalTitle'>How we do it</h2>
+                            <p><h4>Checking Passwords:</h4> We hash the password you enter and send the first five characters of 
+                                the hash to <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a>.  In return they match those five 
+                                characters and return to us all hash values which started with the first five characters we initially sent.  From there a 
+                                comparison is done on the client side and we inform you if the password entered was present in the haveibeenpwned.com database.
+                            </p>
+                            <br>
+                            <p><h4>Creating new Passwords:</h4> We give you the choice of a traditional password or 
+                                a <a href='https://en.wikipedia.org/wiki/Passphrase' target='_blank'>passphrase</a>.  Once you determine the type you select 
+                                some options and we send a request to <a href='https://makemeapassword.ligos.net' target='_blank'>'makemeapassword.ligos.net'</a> 
+                                or <a href='https://randomuser.me' target='_blank'>'randomuser.me'</a>.  They in return generate and return a password based 
+                                on your specified parameters. Once the password is recieved by the client we run it through the Check Password process for 
+                                good measure. 
+                            </p>
+                        </div>
+                    </div>                </div>
+                <div class='rightSide rightWhatDo js-rightWhatDo col-6'>
+                    <img class='passwordLock' src='https://www.theonlinemom.com/wp-content/uploads/2014/07/creating-safe-passwords.jpg' alt='Password key image'>
+                </div>
+            </div>
+
+            <div role='presentation' class='passBox js-passBox row hidden'>
+                <div class='passMagic js-passMagic col-12'>
+                    <!--This is where the password info will display-->
+                </div>
+                <div class='goodNewsBadNews js-goodNewsBadNews col-12 hidden'>
+                    <!--This is where the result info will display-->
+                </div>
+                <div class='thePassword js-thePassword col-12 hidden'>
+                    <!--This is where the result info will display-->
+                </div>
+            </div>
+
+            <div role='presentation' class='toDo js-toDo row'>
+                <div class='leftSide leftToDo js-leftToDo col-6'>
+                    <form id="js-checkPass" role="form" class="checkPass js-checkPass">
+                        <fieldset name="Check Password">
+                            <legend>Check Password</legend>
+                            <button type="submit"  class="mt10 checkSubmit js-checkSubmit"><h3 class='startTitle'>Check Existing Password</h3></button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class='rightSide rightToDo js-rightToDo col-6'>
+                    <form id="js-newPass" role="form" class="newPass js-newPass">
+                        <fieldset name="New Password">
+                            <legend>New Password</legend>
+                            <button type="submit"  class="mt10 newSubmit js-newSubmit"><h3 class='startTitle'>Generate a new Password</h3>
+                            </button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+    
+    </main>
+
+
+  </body>
+
+  <script src='SHA1.js' type='text/javascript'></script>
+  <script src='newPass.js' type='text/javascript'></script>
+  <script src='newPhrase.js' type='text/javascript'></script>
+  <script src='checkPwned.js' type='text/javascript'></script>
+  <script src='index.js' type='text/javascript'></script>
+
+
+
+</html>

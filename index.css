@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body  {
+  color: aliceblue;
+}
+
+main  {
+  height: 300px;
+}
+
+fieldset, legend  {
+  border-width: 0px;
+  font-size: 0px !Important;
+}
+
+.questions  {
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.title  {
+  text-align: center;
+}
+
+.title, .emph, .warning, .goodNews, .passPhraseWord {
+  text-shadow: 1px 1px 2px black;
+}
+
+.emph, .passPhraseWord  {
+  color: #7ee0df;
+}
+
+.passPhraseWord  {
+  overflow-wrap: break-word;
+  font-size: 20px;
+}
+.emph {
+  font-weight: bold;
+  text-decoration: underline;
+ }
+
+ .warning {
+   color: #FFBDBD;
+ }
+
+ .goodNews{
+  color: greenyellow;
+ }
+
+.whatDo {
+  margin-top: 175px !Important;
+}
+
+.title, .whatDo, .toDo, .passBox  {
+  border: 1px solid #7cdcde;
+  background-color: #1A5B89;
+}
+
+.createPassLeft, .createPassRight, .createPassCenter, .newPhraseForm, .passBox, .leftSide, .rightSide {
+  text-align: center;
+}
+
+.passOption, .passLength, .phraseLength, .phraseNumWords {
+  text-align: left;
+  margin-left: 30%;
+}
+
+.phraseOption {
+  text-align: left;
+  margin-left: 20%;
+}
+
+.passPhraseButton {
+  margin-top: 75px;
+}
+
+.passBox {
+  padding: 10px;
+  margin-bottom: 20px !Important;
+}
+
+.passMagic, .goodNewsBadNews  {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.whatDo, .toDo  {
+  margin-bottom: 20px !Important;
+  padding: 10px;
+}
+
+.leftSide, .rightSide {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.passwordLock {
+  width: 50%;
+  border: 1px solid #fbfef8;
+}
+
+.startTitle, .passMagicCheckTitle, .newPassTitle, .newPhrasetitle {
+  font-size: 24px;
+}
+
+.passwordEntry  {
+  margin-top: 10px;
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.showPassCheckBox  {
+  margin-top: 5px;
+}
+
+.passCheckfield {
+  height: 30px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+::placeholder {
+  color: #5F7181;
+  opacity: 1;
+}
+
+button {
+  width: auto;
+  padding: 10px;
+  font-size: 24px;
+  background-color: #02407c;
+  border: 1px solid #7fe0df;
+  border-radius: 10px;
+  color: aliceblue;
+}
+
+.mt20 {
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+a:link, a:visited  {
+  color: aliceblue;
+}
+
+ a:hover  {
+  color: lightslategray;
+  background-color: aliceblue;
+}
+
+.pageModal { /*https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/*/
+  position: fixed;
+  top:  0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modalContent:target{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalContent > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: lightslategray;
+  text-align: left;
+}
+
+
+.close {
+  background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 12px;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover  { 
+  background: lightslategray;
+}
+
+.pageModal h2{
+  text-align: center;
+  font-size: 24px;
+}
+
+/* for veiwport adjusting background*/
+.bg {
+  /* rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* scaling */
+  width: 100%;
+  height: 100%;
+
+  /* position */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+}
+
+@media screen and (max-width: 750px) {
+  .quizAppImg {
+    max-width: 100%;
+    max-height: 300px;
+  }
+}
