@@ -174,25 +174,37 @@ a:link, a:visited  {
   pointer-events: auto;
 }
 
+@media only screen and (min-width: 640px){
+  .modalContent > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: lightslategray;
+    text-align: left;
+    
+  }
+}
+
 .modalContent > div {
-  width: 400px;
   position: relative;
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
   background: lightslategray;
   text-align: left;
+  
 }
-
 
 .close {
   background: #606061;
 	color: #FFFFFF;
 	line-height: 25px;
 	position: absolute;
-	right: -12px;
+	right: 0px; /* -12 */
 	text-align: center;
-	top: -10px;
+	top: -10px; /* -10 */
 	width: 24px;
 	text-decoration: none;
 	font-weight: bold;
