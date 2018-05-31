@@ -187,7 +187,7 @@ input:focus, button:focus, a:focus, img:focus   {
     margin: 10% auto;
     padding: 5px 20px 13px 20px;
     border-radius: 10px;
-    background: #02407c;
+    background: #1A5B89;
     text-align: left;
     max-height: calc(100vh - 100px);
 
@@ -203,7 +203,7 @@ input:focus, button:focus, a:focus, img:focus   {
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
-  background: #02407c;
+  background: #1A5B89;
   text-align: left;
   max-height: calc(100vh - 100px);
   overflow-y: auto;
@@ -216,7 +216,7 @@ input:focus, button:focus, a:focus, img:focus   {
 }
 
 .close {
-  color: #02407c !Important;
+  color: #1A5B89 !Important;
 	background: aliceblue;
 	line-height: 25px;
 	position: relative;
@@ -235,7 +235,7 @@ input:focus, button:focus, a:focus, img:focus   {
 
 .close:hover  { 
   color: aliceblue !Important;
-  background: #02407c;
+  background: #1A5B89;
 
 
 }
