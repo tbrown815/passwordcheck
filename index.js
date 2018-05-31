@@ -63,6 +63,8 @@ function getStarted() {
             <button type='submit'  class='mt20 createNewPass js-createNewPass'>Create a Password</button>  OR 
             <button type='submit'  class='mt20 createNewPhrase js-createNewPhrase'>Create a Passphrase</button>  
           </form>
+          <br>
+          <span><a href='https://en.wikipedia.org/wiki/Passphrase' target='_blank'>What is a Passphrase?</a></span>
           `);
    
        selectYourType() 
@@ -77,8 +79,6 @@ function selectYourType()   {
 
         $('.js-newPass').addClass('hidden');
 
-        console.log('createNewPass clicked');
-
         newPassOptions()
 
     }); 
@@ -88,8 +88,6 @@ function selectYourType()   {
 
         $('.js-newPass').addClass('hidden');
         
-        console.log('createNewPhrase clicked');
-
         newPhraseOptions();
     });
   }

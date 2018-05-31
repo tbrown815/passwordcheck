@@ -1,8 +1,6 @@
 
 function newPassOptions()    {
 
-    console.log('newPassOptions start')
-
     $('.js-passMagic').html(
         `<p class='newPass-title'>Select your options!</p>
         <br><br>
@@ -77,21 +75,18 @@ function newPassOptions()    {
 }
 
 function createNewPass()  {
-    console.log('createNewPass start')
     
     $('.js-newPassForm').unbind().submit(function(event)  {
         checkedCharType = $("input[type=checkbox]:checked").length;
         checkedPassLength = $("input[type=radio]:checked").length;
         
         if(!checkedCharType) {
-            console.log('check alert modal')
             $('#openCharTypeModal')[0].click();
             return false;
             }    
 
         
         if(!checkedPassLength) {
-            console.log('check radio modal')
             $('#openPassLengthModal')[0].click();
             return false;
             }   
@@ -106,22 +101,12 @@ function createNewPass()  {
             $('input[id=special]:checked').val(),
             $('input[name=passLength]:checked').val()
         ];
-        
-        console.log('userUpperBox ',userSelected[0]);
-        console.log('userLower ',userSelected[1]);
-        console.log('userNumber ',userSelected[2]);
-        console.log('userSpecial ',userSelected[3]);
-        console.log('userLength ',userSelected[4]);
 
         let filterUserSelected = userSelected.filter(function (val) {
             return ((val != undefined) || (val != null));
         });
 
-        console.log('toSfilterUserSelectedtring: ', filterUserSelected);
-
         let passQueryString = filterUserSelected.toString();
-
-        console.log('passQueryString: ',passQueryString)
 
         callPassApi(passQueryString, reviewPassResults);
         
@@ -140,7 +125,6 @@ function callPassApi(passQueryString, callback)  {
 }
 
 function reviewPassResults(passResponse) {
-    console.log('passResponse', passResponse)
 
     const origPass = passResponse.results.map(        
         function(passResults, index) {
@@ -148,15 +132,10 @@ function reviewPassResults(passResponse) {
             return `${passResults.login.password}`;
         }
       )
-    console.log('origPass: ',origPass);
 
     let password = origPass.toString();
-    console.log('password: ',password);
-    console.log(password.length)
 
     let updatePass = password.replace(/`|</g, '_');
-
-    console.log('updatePass: ',updatePass)
 
     $('.js-thePassword').removeClass('hidden')
     $('.js-thePassword').html(

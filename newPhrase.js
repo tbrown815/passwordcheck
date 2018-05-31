@@ -1,8 +1,6 @@
 
 function newPhraseOptions()    {
 
-    console.log('newPhraseOptions start')
-
     $('.js-passMagic').html(
         `<p class='newPass-title'>Select your options!</p>
         <br><br>
@@ -100,7 +98,6 @@ function newPhraseOptions()    {
 }
 
 function createNewPhrase()  {
-    console.log('createNewPhrase start')
     
     $('.js-newPhraseForm').unbind().submit(function(event)  {
             checkedNumWords = $("input[name='numWords']:checked").length;
@@ -108,13 +105,11 @@ function createNewPhrase()  {
     
        
             if(!checkedNumWords) {
-                console.log('check radio modal')
                 $('#openNumWordsModal')[0].click();
                 return false;
                 } 
     
             if(!checkedPassStrength) {
-                console.log('check radio modal')
                 $('#openPassStrengthModal')[0].click();
                 return false;
                 } 
@@ -130,25 +125,13 @@ function createNewPhrase()  {
             $('input[name=passStrength]:checked').val()
         ];
         
-        console.log('UpperRandom ',userSelected[0]);
-        console.log('NumRandom ',userSelected[1]);
-        console.log('No Spaces ',userSelected[2]);
-        console.log('Num Words ',userSelected[3]);
-        console.log('passStrength ',userSelected[4]);
-        
         let filterUserSelected = userSelected.filter(function (val) {
             return ((val != undefined) || (val != null));
         });
         
-        console.log('toSfilterUserSelectedtring: ', filterUserSelected);
-        
         let phraseqQeryString = filterUserSelected.toString();
 
-        console.log('phraseqQeryString: ',phraseqQeryString)
-        
         let requestString = phraseqQeryString.replace(/,/g, '');
-
-        console.log('requestString: ',requestString)
 
         callMakeApi(requestString, reviewPhraseResults);
         
@@ -164,7 +147,6 @@ function callMakeApi(requestString, callback)  {
 }
 
 function reviewPhraseResults(passPhrase) {
-    console.log('results', passPhrase)
     
     const origPhrase = passPhrase.pws.map(        
         function(pws, index) {
@@ -172,12 +154,9 @@ function reviewPhraseResults(passPhrase) {
             return `${pws}`;
         }
     )
-    console.log('origPass: ',origPhrase);
     
     let phrase = origPhrase.toString();
-    console.log('phrase: ',phrase);
-    console.log(phrase.length)
-    
+
     $('.js-thePassword').removeClass('hidden')
     $('.js-thePassword').html(
         `<br>
