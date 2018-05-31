@@ -70,9 +70,9 @@ function getStarted() {
      
 }
 
-
 function selectYourType()   {
-    $('.js-createNewPass').unbind().click(function(event)  {
+  
+  $('.js-createNewPass').unbind().click(function(event)  {
         event.preventDefault();
 
         $('.js-newPass').addClass('hidden');
@@ -92,7 +92,7 @@ function selectYourType()   {
 
         newPhraseOptions();
     });
-}
+  }
 
 function displayResults(match)  {
 
