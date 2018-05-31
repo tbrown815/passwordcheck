@@ -60,14 +60,14 @@ function newPassOptions()    {
         <a id='openPassLengthModal' href='#passLengthModal'></a>
             <div id='passLengthModal' class='pageModal modalContent'>
                 <div>
-                    <a href='#' title='Close' class='close'>X</a>
+                    <a href='#' title='Close' class='close'>Close</a>
                     <h2 class='modalTitle'>You must select a password length!</h2>
                 </div>
             </div>
         <a id='openCharTypeModal' href='#charTypeModal'></a>
             <div id='charTypeModal' class='pageModal modalContent'>
                 <div>
-                    <a href='#' title='Close' class='close'>X</a>
+                    <a href='#' title='Close' class='close'>Close</a>
                     <h2 class='modalTitle'>You must select at least one of the character type checkboxes!</h2>
                 </div>
             </div>

@@ -5,6 +5,7 @@
 }
 
 body  {
+  font-family: 'Ubuntu Mono', monospace;
   color: aliceblue;
 }
 
@@ -31,7 +32,7 @@ fieldset, legend  {
 }
 
 .emph, .passPhraseWord  {
-  color: #7ee0df;
+  color: #7cdcde;
 }
 
 .passPhraseWord  {
@@ -40,7 +41,7 @@ fieldset, legend  {
 }
 .emph {
   font-weight: bold;
-  text-decoration: underline;
+  font-style: italic;
  }
 
  .warning {
@@ -152,8 +153,13 @@ a:link, a:visited  {
 }
 
  a:hover  {
-  color: lightslategray;
+  color: #02407c;
   background-color: aliceblue;
+}
+
+input:focus, button:focus, a:focus, img:focus   {
+  outline: 3px double aliceblue;
+  -moz-appearance: none !important;
 }
 
 .pageModal { /*https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/*/
@@ -181,39 +187,57 @@ a:link, a:visited  {
     margin: 10% auto;
     padding: 5px 20px 13px 20px;
     border-radius: 10px;
-    background: lightslategray;
+    background: #02407c;
     text-align: left;
+    max-height: calc(100vh - 100px);
+
+    overflow-y: auto;
+
     
   }
 }
 
 .modalContent > div {
+  width: 275px;
   position: relative;
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
-  background: lightslategray;
+  background: #02407c;
   text-align: left;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+
   
 }
 
+.close::after, .close::before {
+  content: '-';
+}
+
 .close {
-  background: #606061;
-	color: #FFFFFF;
+  color: #02407c !Important;
+	background: aliceblue;
 	line-height: 25px;
-	position: absolute;
-	right: 0px; /* -12 */
+	position: relative;
+	right: -190px;
 	text-align: center;
-	top: -10px; /* -10 */
-	width: 24px;
+	top: -5px;
+	width: 30px;
 	text-decoration: none;
 	font-weight: bold;
-	border-radius: 12px;
-	box-shadow: 1px 1px 3px #000;
+	border-radius: 20px;
+  box-shadow: 1px 1px 3px #000;
+  z-index: 99999;
+  font-size: 16px;
+
 }
 
 .close:hover  { 
-  background: lightslategray;
+  color: aliceblue !Important;
+  background: #02407c;
+
+
 }
 
 .pageModal h2{

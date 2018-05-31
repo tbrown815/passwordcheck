@@ -83,14 +83,14 @@ function newPhraseOptions()    {
         <a id='openNumWordsModal' href='#numWordsModal'></a>
             <div id='numWordsModal' class='pageModal modalContent'>
                 <div>
-                    <a href='#' title='Close' class='close'>X</a>
+                    <a href='#' title='Close' class='close'>Close</a>
                     <h2 class='modalTitle'>You must select the number of words!</h2>
                 </div>
             </div>
         <a id='openPassStrengthModal' href='#passStrengthModal'></a>
             <div id='passStrengthModal' class='pageModal modalContent'>
                 <div>
-                    <a href='#' title='Close' class='close'>X</a>
+                    <a href='#' title='Close' class='close'>Close</a>
                     <h2 class='modalTitle'>You must select a password length!</h2>
                 </div>
             </div>
