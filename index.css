@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+.feedback {
+  text-align: center;
+}
+
 body  {
   font-family: 'Ubuntu Mono', monospace;
   color: aliceblue;
