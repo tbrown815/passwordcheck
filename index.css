@@ -163,7 +163,6 @@ a:link, a:visited  {
 
 input:focus, button:focus, a:focus, img:focus   {
   outline: 3px double aliceblue;
-  -moz-appearance: none !important;
 }
 
 .pageModal { /*https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/*/
