@@ -177,7 +177,7 @@ input:focus, button:focus, a:focus, img:focus   {
   outline: 3px double aliceblue;
 }
 
-.pageModal { /*https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/*/
+.pageModal { /*HT for modal - https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/*/
   position: fixed;
   top:  0;
   right: 0;
@@ -195,34 +195,16 @@ input:focus, button:focus, a:focus, img:focus   {
   pointer-events: auto;
 }
 
-@media only screen and (min-width: 640px){
-  .modalContent > div {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #1A5B89;
-    text-align: left;
-    max-height: calc(100vh - 100px);
-    overflow-y: auto;
-   }
-}
-
 .modalContent > div {
   width: 275px;
   position: relative;
-  margin: 10% auto;
+  margin: 3% auto;
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
   background: #1A5B89;
   text-align: left;
   max-height: calc(100vh - 100px);
   overflow-y: auto;
-}
-
-.close::after, .close::before {
-  content: '-';
 }
 
 .close {
@@ -242,6 +224,60 @@ input:focus, button:focus, a:focus, img:focus   {
   font-size: 16px;
 }
 
+@media screen and (min-width: 640px) {
+  .modalContent > div {
+    width: 400px;
+    position: relative;
+    margin: 5% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #1A5B89;
+    text-align: left;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+   }
+   
+   .close {
+    color: #1A5B89 !important;
+    background: aliceblue;
+    line-height: 25px;
+    position: relative;
+    right: -315px;
+    text-align: center;
+    top: -5px;
+    width: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px #000;
+    z-index: 99999;
+    font-size: 16px;
+  }
+}
+
+
+.close::after, .close::before {
+  content: '-';
+}
+
+/*
+.close {
+  color: #1A5B89 !important;
+	background: aliceblue;
+	line-height: 25px;
+	position: relative;
+	right: -190px;
+	text-align: center;
+	top: -5px;
+	width: 30px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 20px;
+  box-shadow: 1px 1px 3px #000;
+  z-index: 99999;
+  font-size: 16px;
+}
+*/
 .close:hover  { 
   color: aliceblue !important;
   background: #1A5B89;
@@ -252,6 +288,8 @@ input:focus, button:focus, a:focus, img:focus   {
   font-size: 24px;
 }
 
+
+/*HT for custom radios/checks - http://selfteach.me/customizing-radio-buttons-checkboxes/ */ 
 input[type=radio] {
 	display: none;
 }
