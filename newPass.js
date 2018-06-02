@@ -17,39 +17,38 @@ function newPassOptions()    {
         <div class='createPassLeft js-createPassLeft col-6 checkBoxGroup required'>
         <p>Include the following:*</p>
         <br>
-        <p class='passOption'><input id='upper' type='checkbox' value='upper' class='mt20 passCheckbox'>
-        <label for='upper'>Upper Case Letters</label></p>
-        <p class='passOption'><input id='lower' type='checkbox' value='lower' class='mt20 passCheckbox'>
-        <label for='lower'>Lower Case Letters</label></p>
-        <p class='passOption'><input id='number' type='checkbox' value='number' class='mt20 passCheckbox'>
-        <label for='number'>Numbers</label></p>
-       
-        <p class='passOption'><input id='special' type='checkbox' value='special' class='mt20 passCheckbox'>
-        <label for='special'>Special Characters</label></p>
+        <p class='passOption'><input id='upper' type='checkbox' value='upper' class='passCheckbox'>
+        <label for='upper' class='checkboxLabel'>Upper Case Letters</label></p>
+        <p class='passOption'><input id='lower' type='checkbox' value='lower' class='passCheckbox'>
+        <label for='lower' class='checkboxLabel'>Lower Case Letters</label></p>
+        <p class='passOption'><input id='number' type='checkbox' value='number' class='passCheckbox'>
+        <label for='number' class='checkboxLabel'>Numbers</label></p>
+        <p class='passOption'><input id='special' type='checkbox' value='special' class='passCheckbox'>
+        <label for='special' class='checkboxLabel'>Special Characters</label></p>
         </div>
         <div class='createPassRight js-createPassRight col-6' id='passLength' role='radiogroup' aria-labelledby='passLength'>
         <p>Select your password length:*</p>  
         <p class='passLength'><input type='radio' id='12' name='passLength' value='12'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
-        <label for='12'> 12 characters </label></p>
+        class='bt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
+        <label for='12' class='radioLabel'> 12 characters </label></p>
         <p class='passLength'><input type='radio' id='24' name='passLength' value='24'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
-        <label for='24'> 24 characters </label></p>
+        class='bt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
+        <label for='24' class='radioLabel'> 24 characters </label></p>
         <p class='passLength'><input type='radio' id='32' name='passLength' value='32'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
-        <label for='32'> 32 characters </label></p>
+        class='bt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
+        <label for='32' class='radioLabel'> 32 characters </label></p>
         <p class='passLength'><input type='radio' id='48' name='passLength' value='48'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
-        <label for='48'> 48 characters </label></p>
+        class='bt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
+        <label for='48' class='radioLabel'> 48 characters </label></p>
         <p class='passLength'><input type='radio' id='64' name='passLength' value='64'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
-        <label for='64'> 64 characters </label></p>
+        class='bt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
+        <label for='64' class='radioLabel'> 64 characters </label></p>
         </div>
         <br><br><br>
         <div class='passPhraseButton'>
-        <button type='submit'  class='newPassSubmit js-newPassSubmit mt20'>Create my Password!</button>
+        <button type='submit'  class='newPassSubmit js-newPassSubmit bt20'>Create my Password!</button>
         <br>
-        <button type='submit'  class='newPassOops js-newPassOops mt30' formnovalidate>Did you want a phrase instead?</button>
+        <button type='submit'  class='newPassOops js-newPassOops bt30' formnovalidate>Did you want a phrase instead?</button>
         <br>
         <a href='index.html'>Start Over?</a>
         </form>

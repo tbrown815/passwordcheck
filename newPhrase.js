@@ -18,13 +18,13 @@ function newPhraseOptions()    {
         <p>Include the following:</p>
         <br>
 
-        <p class='phraseOption'><input id='letAnywhere' type='checkbox' value='&whenUp=Anywhere' class='mt20 passCheckbox'>
-        <label for='letAnywhere'>Include Random Upper Case</label></p>
+        <p class='phraseOption'><input id='letAnywhere' type='checkbox' value='&whenUp=Anywhere' class='bt30 passCheckbox'>
+        <label for='letAnywhere'>Include Upper Case</label></p>
 
-        <p class='phraseOption'><input id='numAnywhere' type='checkbox' value='&whenNum=Anywhere' class='mt20 passCheckbox'>
+        <p class='phraseOption'><input id='numAnywhere' type='checkbox' value='&whenNum=Anywhere' class='bt30 passCheckbox'>
         <label for='numAnywhere'>Include Random Numbers</label></p>
 
-        <p class='phraseOption'><input id='noSpace' type='checkbox' value='&sp=false' class='mt20 passCheckbox'>
+        <p class='phraseOption'><input id='noSpace' type='checkbox' value='&sp=false' class='bt30 passCheckbox'>
         <label for='noSpace'>No Spaces</label></p>
        
         </div>
@@ -33,23 +33,23 @@ function newPhraseOptions()    {
         <p>Select the number of words to include:*</p>  
 
         <p class='phraseNumWords'><input type='radio' id='10' name='numWords' value='&wc=10'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
+        class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
         <label for='10'> 10 Words </label></p>
         
         <p class='phraseNumWords'><input type='radio' id='15' name='numWords' value='&wc=15'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
+        class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
         <label for='15'> 15 Words </label></p>
 
         <p class='phraseNumWords'><input type='radio' id='20' name='numWords' value='&wc=20'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
+        class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
         <label for='20'> 20 Words </label></p>
 
         <p class='phraseNumWords'><input type='radio' id='25' name='numWords' value='&wc=25'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
+        class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
         <label for='25'> 25 Words </label></p>
 
         <p class='phraseNumWords'><input type='radio' id='30' name='numWords' value='&wc=30'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
+        class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
         <label for='30'> 30 Words </label></p>
 
         </div>
@@ -58,30 +58,30 @@ function newPhraseOptions()    {
         <p>Select your passphrase strength:*</p>  
 
         <p class='phraseLength'><input type='radio' id='normal' name='passStrength' value='&s=normal'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
+        class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
         <label for='normal'> Normal </label></p>
 
         <p class='phraseLength'><input type='radio' id='RandomShort' name='passStrength' value='&s=RandomShort'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
+        class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
         <label for='RandomShort'> Random Short </label></p>
 
         <p class='phraseLength'><input type='radio' id='Strong' name='passStrength' value='&s=Strong'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
+        class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
         <label for='Strong'> Strong </label></p>
 
         <p class='phraseLength'><input type='radio' id='RandomLong' name='passStrength' value='&s=RandomLong'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
+        class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
         <label for='RandomLong'> Random Long </label></p>
 
         <p class='phraseLength'><input type='radio' id='RandomForever' name='passStrength' value='&s=RandomForever'
-        class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
+        class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
         <label for='RandomForever'> Random Forever </label></p>
         </div>
         <br><br><br><br>
         <div class='passPhraseButton'>
-        <button type='submit'  class='newPhraseSubmit js-newPhraseSubmit mt20'>Create my passphrase!</button>
+        <button type='submit'  class='newPhraseSubmit js-newPhraseSubmit bt20'>Create my passphrase!</button>
         <br>
-        <button type='submit'  class='newPhraseOops js-newPhraseOops mt30' formnovalidate>Did you want a password instead?</button>
+        <button type='submit'  class='newPhraseOops js-newPhraseOops bt30' formnovalidate>Did you want a password instead?</button>
         <br>
         <a href='index.html'>Start Over?</a>
         </form>

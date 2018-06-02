@@ -51,9 +51,9 @@
                         <div>
                             <a href='#close' title='Close' class='close'>Close</a>
                             <h2 class='howWeModalTitle'>How we do it</h2>
-                            <p><h4>Checking Passwords:</h4> We hash the password you enter and send the first five characters of 
-                                the hash to <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a>.  In return, they match those five 
-                                characters and return to us all hash values which started with the first five characters we initially sent.  From there a 
+                            <p><h4>Checking Passwords:</h4> We convert the password you enter into a new alphanumeric string and send the first five characters of 
+                                that string to <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a>.  In return, they match those five 
+                                characters and return to us all string values which started with the first five characters we initially sent.  From there a 
                                 comparison is done in the browser and we inform you if the password entered was present in the 
                                 <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a> database.
                             </p>
@@ -93,7 +93,7 @@
                     <form id="js-checkPass" role="form" class="checkPass js-checkPass">
                         <fieldset name="Check Password">
                             <legend>Check Password</legend>
-                            <button type="submit"  class="mt10 checkSubmit js-checkSubmit"><h3 class='startTitle'>Check Existing</h3></button>
+                            <button type="submit"  class="bt10 checkSubmit js-checkSubmit"><h3 class='startTitle'>Check Existing</h3></button>
                         </fieldset>
                     </form>
                 </div>
@@ -101,7 +101,7 @@
                     <form id="js-newPass" role="form" class="newPass js-newPass">
                         <fieldset name="New Password">
                             <legend>New Password</legend>
-                            <button type="submit"  class="mt10 newSubmit js-newSubmit"><h3 class='startTitle'>Generate New</h3>
+                            <button type="submit"  class="bt10 newSubmit js-newSubmit"><h3 class='startTitle'>Generate New</h3>
                             </button>
                         </fieldset>
                     </form>

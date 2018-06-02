@@ -19,7 +19,7 @@ main  {
 
 fieldset, legend  {
   border-width: 0px;
-  font-size: 0px !Important;
+  font-size: 0px !important;
 }
 
 .questions  {
@@ -27,7 +27,9 @@ fieldset, legend  {
   font-weight: 550;
 }
 
-.title  {
+
+
+.title, .createPassLeft, .createPassRight, .createPassCenter, .newPhraseForm, .passBox, .leftSide, .rightSide {
   text-align: center;
 }
 
@@ -57,7 +59,7 @@ fieldset, legend  {
  }
 
 .whatDo {
-  margin-top: 175px !Important;
+  margin-top: 175px !important;
 }
 
 .title, .whatDo, .toDo, .passBox  {
@@ -69,37 +71,27 @@ fieldset, legend  {
   margin-top: 2%;
 }
 
-.createPassLeft, .createPassRight, .createPassCenter, .newPhraseForm, .passBox, .leftSide, .rightSide {
-  text-align: center;
-}
 
-li{
+li, .passOption, .passLength, .phraseLength, .phraseNumWords, .phraseOption, .passwordEntry  {
   text-align: left;
 }
 
 .passOption, .passLength, .phraseLength, .phraseNumWords {
-  text-align: left;
   margin-left: 30%;
 }
 
 .phraseOption {
-  text-align: left;
   margin-left: 20%;
 }
 
-.passBox {
+.passBox, .whatDo, .toDo {
   padding: 10px;
-  margin-bottom: 20px !Important;
+  margin-bottom: 20px !important;
 }
 
 .passMagic, .goodNewsBadNews  {
   margin-left: auto;
   margin-right: auto;
-}
-
-.whatDo, .toDo  {
-  margin-bottom: 20px !Important;
-  padding: 10px;
 }
 
 .leftSide, .rightSide {
@@ -118,18 +110,18 @@ li{
 
 .passwordEntry  {
   margin-top: 10px;
-  text-align: left;
   margin-left: 20%;
   margin-right: 20%;
 }
 
 .showPassCheckBox  {
   margin-top: 5px;
+  margin-left: 5px;
 }
 
 .passCheckfield {
   height: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 100%;
 }
 
@@ -138,7 +130,15 @@ li{
   opacity: 1;
 }
 
-button {
+.newPhraseSubmit, .newPassSubmit {
+  margin-top: 50px; !important;
+}
+
+.bt10, .bt20, .bt30{
+  cursor: pointer;
+}
+
+.bt10, .bt20 {
   width: auto;
   padding: 10px;
   font-size: 24px;
@@ -146,25 +146,22 @@ button {
   border: 1px solid #7fe0df;
   border-radius: 10px;
   color: aliceblue;
+
 }
 
-.newPhraseSubmit, .newPassSubmit {
-  margin-top: 50px; !Important;
-}
-
-.mt20 {
+.bt20 {
   margin-top: 15px;
 }
 
-.mt30 {
+.bt30 {
   margin-top: 5px;
   margin-bottom: 5px;
-  background:none!important;
-  color:inherit;
+  background-color:#1A5B89;
   border:none; 
+  color: aliceblue;
   padding:0!important;
-  font: inherit;
-  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.3s;
 }
 
 .hidden {
@@ -173,11 +170,6 @@ button {
 
 a:link, a:visited  {
   color: aliceblue;
-}
-
- a:hover  {
-  color: #1A5B89;
-  background-color: aliceblue;
 }
 
 input:focus, button:focus, a:focus, img:focus   {
@@ -226,8 +218,6 @@ input:focus, button:focus, a:focus, img:focus   {
   text-align: left;
   max-height: calc(100vh - 100px);
   overflow-y: auto;
-
-  
 }
 
 .close::after, .close::before {
@@ -235,7 +225,7 @@ input:focus, button:focus, a:focus, img:focus   {
 }
 
 .close {
-  color: #1A5B89 !Important;
+  color: #1A5B89 !important;
 	background: aliceblue;
 	line-height: 25px;
 	position: relative;
@@ -249,14 +239,11 @@ input:focus, button:focus, a:focus, img:focus   {
   box-shadow: 1px 1px 3px #000;
   z-index: 99999;
   font-size: 16px;
-
 }
 
 .close:hover  { 
-  color: aliceblue !Important;
+  color: aliceblue !important;
   background: #1A5B89;
-
-
 }
 
 .pageModal h2{
@@ -264,22 +251,35 @@ input:focus, button:focus, a:focus, img:focus   {
   font-size: 24px;
 }
 
-@media only screen and (min-width: 640px){
-  .passPhraseButton {
-    padding-right: 100px;
-    padding-left: 100px;
-  }
+input[type=radio] {
+	display: none;
 }
 
-@media only screen and (max-width: 640px){
-  .rightWhatDo  {
-    display: none;
-  }
+input[type=radio] + label {
+	background: url('radio-button-unchecked.png') left top no-repeat;
+  display: block;
+	min-height: 28px;
+  padding-left: 35px;
+  line-height: 25px;
+}
 
-  .createPassLeft, .createPassCenter, .createPassRight  {
-    margin-top: 20px;
-  }
+input[type=radio]:checked + label {
+  background: url('radio-button-checked_v2.png') left top no-repeat;
+}
 
+input[type=checkbox]  {
+	display: none;
+}
+
+input[type=checkbox] + label  {
+	background: url('checkbox-unchecked.png') left top no-repeat;	display: block;
+	min-height: 28px;
+  padding-left: 35px;
+  line-height: 25px;
+}
+
+input[type=checkbox]:checked + label  {
+  background: url('checkbox-checked_v2.png') left top no-repeat;
 }
 
 /* for veiwport adjusting background*/
@@ -299,11 +299,44 @@ input:focus, button:focus, a:focus, img:focus   {
 
   z-index: -1;
 }
-/*
-@media screen and (max-width: 750px) {
-  .quizAppImg {
-    max-width: 100%;
-    max-height: 300px;
+
+@media only screen and (min-width: 640px){
+  .passPhraseButton {
+    padding-right: 100px;
+    padding-left: 100px;
   }
-  */
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+  
+  /*increases font size on smaller screens*/
+  * {
+    font-size: 105%;
+  }
+
+  /*hides lock image on smaller screens*/
+  .rightWhatDo  {
+    display: none;
+  }
+
+  .createPassLeft, .createPassCenter, .createPassRight  {
+    margin-top: 20px;
+  }
+/*moves pass/phrase options to the left to reduce wrapping on small screens */
+  .passOption, .passLength, .phraseLength, .phraseNumWords, .phraseOption {
+    margin-left: 5%;
+  }
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+  
+  body {
+    font-size: 100%;
+  }
+
+  .createPassLeft, .createPassCenter, .createPassRight  {
+    margin-top: 20px;
+  }
+
 }

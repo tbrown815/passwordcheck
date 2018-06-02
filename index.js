@@ -30,23 +30,34 @@ function getStarted() {
         `);
       
        $('.js-passMagic').html(
-         `<form id='js-passMagicCheck' role='form' class='passMagicCheck js-passMagicCheck'>
+         `<form id='js-passMagicCheck' role='form' class='passMagicCheck js-passMagicCheck' novalidate>
            <label class='passMagicCheckTitle' for='passCheckfield'>Check your Password</label>
            <br>
            <div class='passwordEntry'>
-           <input class="passCheckfield js-passCheckfield" type="password" name="passCheckfield" placeholder="Enter a password to check here..."/> 
+           <input required class="passCheckfield js-passCheckfield" type="password" name="passCheckfield" placeholder="Enter a password to check here..."/> 
            <br>
-           <label class='showPassCheckBox js-showPassCheckBox' for='showPassword' role='checkbox' aria-labelby='showPassword'>
            <input type='checkbox' name='showPassword' id='showPassword' class='showPassCheckBox'>
+           <label class='showPassCheckBox js-showPassCheckBox' for='showPassword' role='checkbox' aria-labelby='showPassword'>
            Show Password
            </label>
            </div>
            <br>
-           <button type="submit"  class="mt20 checkSubmit js-checkSubmit">Click to Check</button>   
+           <button type="submit"  class="bt20 checkSubmit js-checkSubmit">Click to Check</button>   
            <br>
            <a href='index.html'>Start Over?</a>
            </form>
-           `);
+          
+           <div class='hiddenCheckAlert'>
+            <a id='openPassCheckModal' href='#passCheckModal'></a>
+            <div id='passCheckModal' class='pageModal modalContent'>
+            <div>
+            <a href='#' title='Close' class='close'>Close</a>
+            <h2 class='modalTitle'>You must enter at least one character!</h2>
+            </div>
+            </div>
+            </div>
+        `);
+
 
          $('#showPassword').change(function()  {
            if ($(this).is(':checked')) {
@@ -74,8 +85,8 @@ function getStarted() {
           `<form id='js-selectPass' role='form' class='selectPass js-selectPass'>
             <label class='newPassTitle'>Select a password type below!</label>
             <br>
-            <button type='submit'  class='mt20 createNewPass js-createNewPass'>Create a Password</button>  OR 
-            <button type='submit'  class='mt20 createNewPhrase js-createNewPhrase'>Create a Passphrase</button>  
+            <button type='submit'  class='bt20 createNewPass js-createNewPass'>Create a Password</button>  OR 
+            <button type='submit'  class='bt20 createNewPhrase js-createNewPhrase'>Create a Passphrase</button>  
           </form>
           <br>
           <span><a href='https://en.wikipedia.org/wiki/Passphrase' target='_blank'>What is a Passphrase?</a></span>
@@ -111,6 +122,10 @@ function displayResults(match)  {
     if (match > 0)  {
       $('.js-passMagic').addClass('hidden');
       $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
+      $('.js-infoBox').html(
+        `<span class='titleInfo'><h2>Enter a password to compare against a database of known compromised passwords or 
+        generate a new <span class='emph'>secure</span> password or passphrase.  Make a selection below to get started!</h2></span>
+        `);
       $('.js-goodNewsBadNews').html(
         `<h2  class='warning'>WARNING!</h2>
         <br>
@@ -127,6 +142,10 @@ function displayResults(match)  {
     else  {
       $('.js-passMagic').addClass('hidden');
       $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
+      $('.js-infoBox').html(
+        `<span class='titleInfo'><h2>Enter a password to compare against a database of known compromised passwords or 
+        generate a new <span class='emph'>secure</span> password or passphrase.  Make a selection below to get started!</h2></span>
+        `);
       $('.js-goodNewsBadNews').html(
         `<h2 class='goodNews'>GOOD NEWS!</h2>
         <br>

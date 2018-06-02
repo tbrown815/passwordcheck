@@ -5,6 +5,13 @@ function listenForPass()  {
     
     let msg = $('input').val();
 
+    let msgLen = msg.length;
+
+    if(msgLen < 1) {
+      $('#openPassCheckModal')[0].click();
+      return false;
+    }   
+
     hashThePass(msg);
   });
 }
