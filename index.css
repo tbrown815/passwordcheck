@@ -131,7 +131,7 @@ li, .passOption, .passLength, .phraseLength, .phraseNumWords, .phraseOption, .pa
 }
 
 .newPhraseSubmit, .newPassSubmit {
-  margin-top: 50px; !important;
+  margin-top: 50px !important;
 }
 
 .bt10, .bt20, .bt30{
