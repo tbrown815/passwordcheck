@@ -43,6 +43,8 @@ function getStarted() {
            </div>
            <br>
            <button type="submit"  class="mt20 checkSubmit js-checkSubmit">Click to Check</button>   
+           <br>
+           <a href='index.html'>Start Over?</a>
            </form>
            `);
 
@@ -131,7 +133,7 @@ function displayResults(match)  {
         <p>The password was <span class='emph'>NOT</span> found in a database of compromised passwords.</p>
         <br>
         <p>This does not necessarily mean your password is good, only that it didn't appear in the database. You can continue 
-        to use this password or if you would like you can generate a new one.</p>
+        to use this password, or if you would like, you can generate a new one.</p>
         <br>
         
         `);

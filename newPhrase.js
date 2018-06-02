@@ -80,9 +80,15 @@ function newPhraseOptions()    {
         <br><br><br><br>
         <div class='passPhraseButton'>
         <button type='submit'  class='newPhraseSubmit js-newPhraseSubmit mt20'>Create my passphrase!</button>
-        </div>
-        <p>* = Required</p>
+        <br>
+        <button type='submit'  class='newPhraseOops js-newPhraseOops mt30' formnovalidate>Did you want a password instead?</button>
+        <br>
+        <a href='index.html'>Start Over?</a>
         </form>
+        <br>
+        <br>
+        <p>* = Required</p>
+        </div>
         <div class='hiddenCheckAlert'>
         <a id='openNumWordsModal' href='#numWordsModal'></a>
             <div id='numWordsModal' class='pageModal modalContent'>
@@ -104,6 +110,14 @@ function newPhraseOptions()    {
 }
 
 function createNewPhrase()  {
+
+    $('.js-newPhraseOops').unbind().click(function(event)  {
+        console.log('backClicked')
+        
+        event.preventDefault();
+        
+        newPassOptions();
+     });
     
     $('.js-newPhraseForm').unbind().submit(function(event)  {
             checkedNumWords = $("input[name='numWords']:checked").length;
