@@ -1,6 +1,15 @@
 
 function newPassOptions()    {
 
+    $('.js-infoBox').html(
+        `<span class='titleInfo'><h2>Tips for a strong password:</h2>
+            <ul>
+            <li>Make the password at least 12 characters long.</li>
+            <li>Include numbers, capital letters and symbols.</li>
+            <li>Don’t just use one password.</li>
+        </span>
+        `);
+
     $('.js-passMagic').html(
         `<p class='newPass-title'>Select your options!</p>
         <br><br>

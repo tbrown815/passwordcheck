@@ -14,11 +14,20 @@ $.getScript('checkPwned.js', function(data)  {
   });
   
 function getStarted() {
+      $('.js-infoBox').html(
+        `<span class='titleInfo'><h2>Enter a password to compare against a database of known compromised passwords or 
+        generate a new <span class='emph'>secure</span> password or passphrase.  Make a selection below to get started!</h2></span>
+        `);
+
       $('.js-checkPass').unbind().submit(function(event)   {
        event.preventDefault();
   
        $('.js-toDo, .js-goodNewsBadNews, .js-thePassword').addClass('hidden');
        $('.js-passBox, .js-passMagic').removeClass('hidden');
+      
+       $('.js-infoBox').html(
+        `<span class='titleInfo'><h2>Enter a password that you'd like to compare to a database of known compromised passwords! </h2></span>
+        `);
       
        $('.js-passMagic').html(
          `<form id='js-passMagicCheck' role='form' class='passMagicCheck js-passMagicCheck'>
@@ -55,7 +64,10 @@ function getStarted() {
    
         $('.js-toDo, .js-goodNewsBadNews, .js-thePassword').addClass('hidden');
         $('.js-passBox, .js-passMagic').removeClass('hidden');
-       
+        $('.js-infoBox').html(
+          `<span class='titleInfo'><h2>Do you want a password or a passphrase?</h2>
+          </span>
+          `);
         $('.js-passMagic').html(
           `<form id='js-selectPass' role='form' class='selectPass js-selectPass'>
             <label class='newPassTitle'>Select a password type below!</label>

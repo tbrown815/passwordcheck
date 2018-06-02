@@ -73,6 +73,10 @@ fieldset, legend  {
   text-align: center;
 }
 
+li{
+  text-align: left;
+}
+
 .passOption, .passLength, .phraseLength, .phraseNumWords {
   text-align: left;
   margin-left: 30%;
