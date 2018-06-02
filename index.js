@@ -34,7 +34,7 @@ function getStarted() {
            <label class='passMagicCheckTitle' for='passCheckfield'>Check your Password</label>
            <br>
            <div class='passwordEntry'>
-           <input class="passCheckfield js-passCheckfield" type="password" name="passCheckfield" placeholder="Enter password to check here..."/> 
+           <input class="passCheckfield js-passCheckfield" type="password" name="passCheckfield" placeholder="Enter a password to check here..."/> 
            <br>
            <label class='showPassCheckBox js-showPassCheckBox' for='showPassword' role='checkbox' aria-labelby='showPassword'>
            <input type='checkbox' name='showPassword' id='showPassword' class='showPassCheckBox'>
@@ -115,7 +115,7 @@ function displayResults(match)  {
         <p>We're sorry to inform you that the password <span class='emph'>WAS</span> found in a database of compromised passwords.</p>
         <br>
         <p>This does not mean you have been compromised, only that the password provided has been detected in the database.
-        If you are seeing this message it is a good idea to generate a different password</p>
+        If you are seeing this message it is a good idea to generate a different password.</p>
         <br>
         
         

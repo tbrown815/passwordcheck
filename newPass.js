@@ -59,9 +59,12 @@ function newPassOptions()    {
         <br><br><br>
         <div class='passPhraseButton'>
         <button type='submit'  class='newPassSubmit js-newPassSubmit mt20'>Create my Password!</button>
+        </form>
+        <form id='js-newPassBack' role='form' class='newPassBack js-newPassBack' novalidate>
+        <button type='submit'  class='newPassBackButton js-newPassBackButton mt30' formnovalidate="formnovalidate">Back</button>
+        </form>
         </div>
         <p>* = Required</p>
-        </form>
         <div class='hiddenCheckAlert'>
         <a id='openPassLengthModal' href='#passLengthModal'></a>
             <div id='passLengthModal' class='pageModal modalContent'>
@@ -79,15 +82,27 @@ function newPassOptions()    {
             </div>
         </div>
         `);
-    createNewPass();
-}
+        
+        createNewPass();
+    }
+
 
 function createNewPass()  {
-    
+/*    
+    $('.js-newPassBack').unbind().submit(function(event)  {
+       console.log('backClicked')
+       
+       event.preventDefault();
+       
+       selectYourType();
+    });
+*/
     $('.js-newPassForm').unbind().submit(function(event)  {
+
+
         checkedCharType = $("input[type=checkbox]:checked").length;
         checkedPassLength = $("input[type=radio]:checked").length;
-        
+
         if(!checkedCharType) {
             $('#openCharTypeModal')[0].click();
             return false;
@@ -152,7 +167,7 @@ function reviewPassResults(passResponse) {
         <br>
         <p class='passPhraseWord'>${updatePass}</p>
         <br>
-        <p>You can also click below to check another password/passphrase or try to generate a new one!</p>
+        <p>You can also click below to check an additional password/passphrase or generate a new one!</p>
         `);
 
     hashThePass(updatePass);
