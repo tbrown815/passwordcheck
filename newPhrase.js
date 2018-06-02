@@ -31,7 +31,7 @@ function newPhraseOptions()    {
 
         <div class='createPassCenter js-createPassCenter col-4' id='numWords' role='radiogroup' aria-labelledby='numWords'>
         <p>Select the number of words to include:*</p>  
-
+        <br>
         <p class='phraseNumWords'><input type='radio' id='10' name='numWords' value='&wc=10'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
         <label for='10'> 10 Words </label></p>
@@ -55,27 +55,23 @@ function newPhraseOptions()    {
         </div>
 
         <div class='createPassRight js-createPassRight col-4' id='passStrength' role='radiogroup' aria-labelledby='passStrength'>
-        <p>Select your passphrase strength:*</p>  
-
-        <p class='phraseLength'><input type='radio' id='normal' name='passStrength' value='&s=normal'
+        <p>Select the minimum number of characters:*</p>  
+        <br>
+        <p class='phraseLength'><input type='radio' id='min20' name='passStrength' value='&minCH=20'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
-        <label for='normal'> Normal </label></p>
+        <label for='min20'> 20 </label></p>
 
-        <p class='phraseLength'><input type='radio' id='RandomShort' name='passStrength' value='&s=RandomShort'
+        <p class='phraseLength'><input type='radio' id='min40' name='passStrength' value='&minCH=40'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
-        <label for='RandomShort'> Random Short </label></p>
+        <label for='min40'> 40 </label></p>
 
-        <p class='phraseLength'><input type='radio' id='Strong' name='passStrength' value='&s=Strong'
+        <p class='phraseLength'><input type='radio' id='min80' name='passStrength' value='&minCH=80'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
-        <label for='Strong'> Strong </label></p>
-
-        <p class='phraseLength'><input type='radio' id='RandomLong' name='passStrength' value='&s=RandomLong'
+        <label for='min80'> 80 </label></p>
+        
+        <p class='phraseLength'><input type='radio' id='min160' name='passStrength' value='&minCH=160'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
-        <label for='RandomLong'> Random Long </label></p>
-
-        <p class='phraseLength'><input type='radio' id='RandomForever' name='passStrength' value='&s=RandomForever'
-        class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
-        <label for='RandomForever'> Random Forever </label></p>
+        <label for='min160'> 160 </label></p>
         </div>
         <br><br><br><br>
         <div class='passPhraseButton'>
@@ -193,4 +189,3 @@ function reviewPhraseResults(passPhrase) {
 
    
    $(newPhraseOptions);
-   

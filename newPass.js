@@ -28,6 +28,7 @@ function newPassOptions()    {
         </div>
         <div class='createPassRight js-createPassRight col-6' id='passLength' role='radiogroup' aria-labelledby='passLength'>
         <p>Select your password length:*</p>  
+        <br>
         <p class='passLength'><input type='radio' id='12' name='passLength' value='12'
         class='bt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
         <label for='12' class='radioLabel'> 12 characters </label></p>

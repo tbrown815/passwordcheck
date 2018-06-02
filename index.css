@@ -260,24 +260,6 @@ input:focus, button:focus, a:focus, img:focus   {
   content: '-';
 }
 
-/*
-.close {
-  color: #1A5B89 !important;
-	background: aliceblue;
-	line-height: 25px;
-	position: relative;
-	right: -190px;
-	text-align: center;
-	top: -5px;
-	width: 30px;
-	text-decoration: none;
-	font-weight: bold;
-	border-radius: 20px;
-  box-shadow: 1px 1px 3px #000;
-  z-index: 99999;
-  font-size: 16px;
-}
-*/
 .close:hover  { 
   color: aliceblue !important;
   background: #1A5B89;
@@ -303,7 +285,7 @@ input[type=radio] + label {
 }
 
 input[type=radio]:checked + label {
-  background: url('radio-button-checked_v2.png') left top no-repeat;
+  background: url('radio-button-checked_v3.png') left top no-repeat;
 }
 
 input[type=checkbox]  {
@@ -318,7 +300,7 @@ input[type=checkbox] + label  {
 }
 
 input[type=checkbox]:checked + label  {
-  background: url('checkbox-checked_v2.png') left top no-repeat;
+  background: url('checkbox-checked_v3.png') left top no-repeat;
 }
 
 /* for veiwport adjusting background*/
