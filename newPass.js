@@ -8,7 +8,7 @@ function newPassOptions()    {
         <form id='js-newPassForm' role='form' class='newPassForm js-newPassForm' novalidate>
        
         <div class='createPassLeft js-createPassLeft col-6 checkBoxGroup required'>
-        <p>Include the following:</p>
+        <p>Include the following:*</p>
         <br>
 
         <p class='passOption'><input id='upper' type='checkbox' value='upper' class='mt20 passCheckbox'>
@@ -25,7 +25,7 @@ function newPassOptions()    {
         </div>
 
         <div class='createPassRight js-createPassRight col-6' id='passLength' role='radiogroup' aria-labelledby='passLength'>
-        <p>Select your password length:</p>  
+        <p>Select your password length:*</p>  
 
         <p class='passLength'><input type='radio' id='12' name='passLength' value='12'
         class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
@@ -51,6 +51,7 @@ function newPassOptions()    {
         <div class='passPhraseButton'>
         <button type='submit'  class='newPassSubmit js-newPassSubmit mt20'>Create my Password!</button>
         </div>
+        <p>* = Required</p>
         </form>
         <div class='hiddenCheckAlert'>
         <a id='openPassLengthModal' href='#passLengthModal'></a>

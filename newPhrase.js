@@ -22,7 +22,7 @@ function newPhraseOptions()    {
         </div>
 
         <div class='createPassCenter js-createPassCenter col-4' id='numWords' role='radiogroup' aria-labelledby='numWords'>
-        <p>Select the number of words to include:</p>  
+        <p>Select the number of words to include:*</p>  
 
         <p class='phraseNumWords'><input type='radio' id='10' name='numWords' value='&wc=10'
         class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
@@ -47,7 +47,7 @@ function newPhraseOptions()    {
         </div>
 
         <div class='createPassRight js-createPassRight col-4' id='passStrength' role='radiogroup' aria-labelledby='passStrength'>
-        <p>Select your passphrase strength:</p>  
+        <p>Select your passphrase strength:*</p>  
 
         <p class='phraseLength'><input type='radio' id='normal' name='passStrength' value='&s=normal'
         class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
@@ -73,6 +73,7 @@ function newPhraseOptions()    {
         <div class='passPhraseButton'>
         <button type='submit'  class='newPhraseSubmit js-newPhraseSubmit mt20'>Create my passphrase!</button>
         </div>
+        <p>* = Required</p>
         </form>
         <div class='hiddenCheckAlert'>
         <a id='openNumWordsModal' href='#numWordsModal'></a>
