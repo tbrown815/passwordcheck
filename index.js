@@ -105,7 +105,7 @@ function displayResults(match)  {
         <p>This does not mean you have been compromised, only that the password provided has been detected in the database.
         If you are seeing this message it is a good idea to generate a different password</p>
         <br>
-        <p>Click below to check another password or try to generate a new one!</p>
+        
         
         `);
     }
@@ -121,7 +121,6 @@ function displayResults(match)  {
         <p>This does not necessarily mean your password is good, only that it didn't appear in the database. You can continue 
         to use this password or if you would like you can generate a new one.</p>
         <br>
-        <p>Click below to check another password or generate a new one!</p>
         
         `);
     }

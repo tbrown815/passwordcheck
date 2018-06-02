@@ -25,9 +25,7 @@ function newPassOptions()    {
         </div>
 
         <div class='createPassRight js-createPassRight col-6' id='passLength' role='radiogroup' aria-labelledby='passLength'>
-        <br>
         <p>Select your password length:</p>  
-        <br>
 
         <p class='passLength'><input type='radio' id='12' name='passLength' value='12'
         class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
@@ -51,7 +49,7 @@ function newPassOptions()    {
         </div>
         <br><br><br>
         <div class='passPhraseButton'>
-        <button type='submit'  class='mt20 newPassSubmit js-newPassSubmit'>Create my Password!</button>
+        <button type='submit'  class='newPassSubmit js-newPassSubmit mt20'>Create my Password!</button>
         </div>
         </form>
         <div class='hiddenCheckAlert'>
@@ -143,6 +141,8 @@ function reviewPassResults(passResponse) {
         <span class='yourNewPass'>This is the password that was generated:</span>
         <br>
         <p class='passPhraseWord'>${updatePass}</p>
+        <br>
+        <p>You can also click below to check another password/passphrase or try to generate a new one!</p>
         `);
 
     hashThePass(updatePass);

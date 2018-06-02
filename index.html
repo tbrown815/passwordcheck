@@ -44,7 +44,7 @@
                         generate a new <span class='emph'>secure</span> password or passphrase.  Make a selection below to get started!</h2>
                     </p>
                     <br>
-                    <h4><a href='#openModal'>How do we it? Click here!</a></h4>
+                    <h4><a href='#openModal'>How do we do it? Click here!</a></h4>
                     <div id='openModal' class='pageModal modalContent'>
                         <div>
                             <a href='#close' title='Close' class='close'>Close</a>
@@ -52,14 +52,15 @@
                             <p><h4>Checking Passwords:</h4> We hash the password you enter and send the first five characters of 
                                 the hash to <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a>.  In return they match those five 
                                 characters and return to us all hash values which started with the first five characters we initially sent.  From there a 
-                                comparison is done on the client side and we inform you if the password entered was present in the haveibeenpwned.com database.
+                                comparison is done on the client side and we inform you if the password entered was present in the 
+                                <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a> database.
                             </p>
                             <br>
                             <p><h4>Creating new Passwords:</h4> We give you the choice of a traditional password or 
                                 a <a href='https://en.wikipedia.org/wiki/Passphrase' target='_blank'>passphrase</a>.  Once you determine the type you select 
                                 some options and we send a request to <a href='https://makemeapassword.ligos.net' target='_blank'>'makemeapassword.ligos.net'</a> 
                                 or <a href='https://randomuser.me' target='_blank'>'randomuser.me'</a>.  They in return generate and return a password based 
-                                on your specified parameters. Once the password is recieved by the client we run it through the Check Password process for 
+                                on your specified parameters. Once the password is received by the client we run it through the Check Password process for 
                                 good measure. 
                             </p>
                         </div>
@@ -90,7 +91,7 @@
                     <form id="js-checkPass" role="form" class="checkPass js-checkPass">
                         <fieldset name="Check Password">
                             <legend>Check Password</legend>
-                            <button type="submit"  class="mt10 checkSubmit js-checkSubmit"><h3 class='startTitle'>Check Existing Password</h3></button>
+                            <button type="submit"  class="mt10 checkSubmit js-checkSubmit"><h3 class='startTitle'>Check Existing</h3></button>
                         </fieldset>
                     </form>
                 </div>
@@ -98,7 +99,7 @@
                     <form id="js-newPass" role="form" class="newPass js-newPass">
                         <fieldset name="New Password">
                             <legend>New Password</legend>
-                            <button type="submit"  class="mt10 newSubmit js-newSubmit"><h3 class='startTitle'>Generate a new Password</h3>
+                            <button type="submit"  class="mt10 newSubmit js-newSubmit"><h3 class='startTitle'>Generate New</h3>
                             </button>
                         </fieldset>
                     </form>

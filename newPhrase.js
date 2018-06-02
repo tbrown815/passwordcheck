@@ -22,9 +22,8 @@ function newPhraseOptions()    {
         </div>
 
         <div class='createPassCenter js-createPassCenter col-4' id='numWords' role='radiogroup' aria-labelledby='numWords'>
-        <br>
         <p>Select the number of words to include:</p>  
-        <br>
+
         <p class='phraseNumWords'><input type='radio' id='10' name='numWords' value='&wc=10'
         class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
         <label for='10'> 10 Words </label></p>
@@ -48,9 +47,7 @@ function newPhraseOptions()    {
         </div>
 
         <div class='createPassRight js-createPassRight col-4' id='passStrength' role='radiogroup' aria-labelledby='passStrength'>
-        <br>
         <p>Select your passphrase strength:</p>  
-        <br>
 
         <p class='phraseLength'><input type='radio' id='normal' name='passStrength' value='&s=normal'
         class='mt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
@@ -74,7 +71,7 @@ function newPhraseOptions()    {
         </div>
         <br><br><br><br>
         <div class='passPhraseButton'>
-        <button type='submit'  class='mt20 newPhraseSubmit js-newPhraseSubmit'>Create my passphrase!</button>
+        <button type='submit'  class='newPhraseSubmit js-newPhraseSubmit mt20'>Create my passphrase!</button>
         </div>
         </form>
         <div class='hiddenCheckAlert'>
@@ -163,6 +160,9 @@ function reviewPhraseResults(passPhrase) {
         <span class='yourNewPass'>This is the passphrase that was generated:</span>
         <br>
          <p class='passPhraseWord'>${phrase}</p>
+         <br>
+         <p>You can also click below to check another password/passphrase or generate a new one!</p>
+
         `);
         
         hashThePass(phrase);
