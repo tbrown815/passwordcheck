@@ -4,10 +4,6 @@
   padding: 0;
 }
 
-.feedback {
-  text-align: center;
-}
-
 body  {
   font-family: 'Ubuntu Mono', monospace;
   color: aliceblue;
@@ -181,7 +177,8 @@ input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-
   outline: 3px double aliceblue;
 }
 
-.pageModal { /*HT for modal - https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/*/
+/*HT for modal - https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/ */
+.pageModal { 
   position: fixed;
   top:  0;
   right: 0;
@@ -445,9 +442,11 @@ input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-
   .createPassLeft, .createPassCenter, .createPassRight  {
     margin-top: 20px;
   }
+
 /*moves pass/phrase options to the left to reduce wrapping on small screens */
   .passOption, .passLength, .phraseLength, .phraseNumWords, .phraseOption {
     margin-left: 5%;
+    font-size: 80% !important;
   }
 
   .showPassCheckBox  {
@@ -459,9 +458,9 @@ input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-
   }
 }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1023px)  {
   
-  body {
+  * {
     font-size: 100%;
   }
 
@@ -474,6 +473,10 @@ input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-
     margin-left: 5px;
     text-align: left;
     left: -150px;
+  }
+
+  .noSpace  {
+    margin-left: 10%;
   }
 
 }

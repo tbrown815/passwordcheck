@@ -28,7 +28,7 @@ function newPhraseOptions()    {
         <label for='numAnywhere'>Include Random Numbers</label></p>
         </div>
         <div class='checkBx'>
-        <p class='phraseOption'><input id='noSpace' type='checkbox' value='&sp=false' class='bt30 passCheckbox' aria-labelledby='phraseOption'>
+        <p class='phraseOption noSpace'><input id='noSpace' type='checkbox' value='&sp=false' class='bt30 passCheckbox' aria-labelledby='phraseOption'>
         <label for='noSpace'>No Spaces</label></p>
         </div>
         
