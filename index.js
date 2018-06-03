@@ -30,7 +30,7 @@ function getStarted() {
         `);
       
        $('.js-passMagic').html(
-         `<form id='js-passMagicCheck' role='form' class='passMagicCheck js-passMagicCheck' novalidate>
+         `<form id='js-passMagicCheck' role='form' class='passMagicCheck js-passMagicCheck' aria-live='assertive' novalidate>
             <div class='passwordEntry' role='presentation'>
               <label class='passMagicCheckTitle' for='passCheckfield'>
                 Check your Password 

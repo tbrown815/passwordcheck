@@ -2,7 +2,7 @@
 function newPhraseOptions()    {
 
     $('.js-infoBox').html(
-        `<span class='titleInfo' role='Presentation'><h2>Tips for passphrases:</h2>
+        `<span class='titleInfo' role='Presentation' aria-live='assertive'><h2>Tips for passphrases:</h2>
         <h3>A strong passphrase is a random combination of words that are meaningless together. The more unpredictable the better!
 
         No matter how strong your previous password may be, its appearance in a password dictionary makes it an easy target for hackers.  Get started below!
@@ -14,7 +14,7 @@ function newPhraseOptions()    {
         `<p class='newPass-title'>Select your options!</p>
         <br><br>
 
-        <form id='js-newPhraseForm' role='form' class='newPhraseForm js-newPhraseForm' aria-label='newPhraseForm' novalidate>
+        <form id='js-newPhraseForm' role='form' class='newPhraseForm js-newPhraseForm' aria-label='newPhraseForm' aria-live='assertive' novalidate>
         <div class='createPassLeft js-createPassLeft col-4 checkBoxGroup required'>
         <p>Include the following:</p>
         <br>
@@ -102,14 +102,14 @@ function newPhraseOptions()    {
         </div>
         <div class='hiddenCheckAlert' role='dialog'>
         <a id='openNumWordsModal' href='#numWordsModal'></a>
-            <div id='numWordsModal' class='pageModal modalContent'>
+            <div id='numWordsModal' class='pageModal modalContent' aria-live='assertive'>
                 <div>
                     <a href='#' title='Close' class='close'>Close</a>
                     <h2 class='modalTitle'>You must select the number of words!</h2>
                 </div>
             </div>
         <a id='openPassStrengthModal' href='#passStrengthModal'></a>
-            <div id='passStrengthModal' class='pageModal modalContent'>
+            <div id='passStrengthModal' class='pageModal modalContent' aria-live='assertive'>
                 <div>
                     <a href='#' title='Close' class='close'>Close</a>
                     <h2 class='modalTitle'>You must select a password length!</h2>

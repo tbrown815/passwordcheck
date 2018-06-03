@@ -51,14 +51,14 @@
                 </div>
             </div>
 
-            <div role='presentation' class='passBox js-passBox row hidden'>
+            <div role='presentation' class='passBox js-passBox row hidden' aria-live='assertive'>
                 <div class='passMagic js-passMagic col-12'>
                         <!--This is where the password info will display-->
                 </div>
-                <div class='goodNewsBadNews js-goodNewsBadNews col-12 hidden'>
+                <div class='goodNewsBadNews js-goodNewsBadNews col-12 hidden' aria-live='assertive'>
                     <!--This is where the result info will display-->
                 </div>
-                <div class='thePassword js-thePassword col-12 hidden'>
+                <div class='thePassword js-thePassword col-12 hidden' aria-live='assertive'>
                     <!--This is where the result info will display-->
                 </div>
             </div>
@@ -87,7 +87,7 @@
                     <div id='openModal' class='pageModal modalContent'>
                          <div>
                               <a href='#close' title='Close' class='close'>Close</a>
-                              <h2 class='howWeModalTitle'>How we do it:</h2>
+                              <h2 class='howWeModalTitle' aria-live='assertive'>How we do it:</h2>
                         <br>
                          <p><h4>Checking Passwords:</h4> We convert the password you enter into a new alphanumeric string and send the first five characters of 
                         that string to <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a>.  In return, they match those five 

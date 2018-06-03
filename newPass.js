@@ -1,7 +1,7 @@
 function newPassOptions()    {
 
     $('.js-infoBox').html(
-        `<span class='titleInfo' role='Presentation'><h2>Tips for a strong password:</h2>
+        `<span class='titleInfo' role='Presentation' aria-live='assertive'><h2>Tips for a strong password:</h2>
         <h3>Your new password should be at least 12 characters long, and include numbers, capital letters, and special characters. 
         Be sure to create a new password for each of your accounts.  Get started below!
         </h3>
@@ -11,7 +11,7 @@ function newPassOptions()    {
     $('.js-passMagic').html(
         `<p class='newPass-title'>Select your options!</p>
         <br><br>
-        <form id='js-newPassForm' role='form' class='newPassForm js-newPassForm' aria-label='newPassForm' novalidate>
+        <form id='js-newPassForm' role='form' class='newPassForm js-newPassForm' aria-label='newPassForm' aria-live='assertive' novalidate>
        
         <div class='createPassLeft js-createPassLeft col-6 checkBoxGroup aria-labelledby='passOption' required'>
         <p>Include the following:*</p>
@@ -76,14 +76,14 @@ function newPassOptions()    {
         </div>
         <div class='hiddenCheckAlert' role='dialog'>
         <a id='openPassLengthModal' href='#passLengthModal'></a>
-            <div id='passLengthModal' class='pageModal modalContent'>
+            <div id='passLengthModal' class='pageModal modalContent' aria-live='assertive'>
                 <div>
                     <a href='#' title='Close' class='close'>Close</a>
                     <h2 class='modalTitle'>You must select a password length!</h2>
                 </div>
             </div>
         <a id='openCharTypeModal' href='#charTypeModal'></a>
-            <div id='charTypeModal' class='pageModal modalContent'>
+            <div id='charTypeModal' class='pageModal modalContent' aria-live='assertive'>
                 <div>
                     <a href='#' title='Close' class='close'>Close</a>
                     <h2 class='modalTitle'>You must select at least one of the character type checkboxes!</h2>
