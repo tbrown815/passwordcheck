@@ -1,47 +1,66 @@
 function newPassOptions()    {
 
     $('.js-infoBox').html(
-        `<span class='titleInfo'><h2>Tips for a strong password:</h2>
-        Your new password should be at least 12 characters long, and include numbers, capital letters, and special characters. 
+        `<span class='titleInfo' role='Presentation'><h2>Tips for a strong password:</h2>
+        <h3>Your new password should be at least 12 characters long, and include numbers, capital letters, and special characters. 
         Be sure to create a new password for each of your accounts.  Get started below!
+        </h3>
         </span>
         `);
 
     $('.js-passMagic').html(
         `<p class='newPass-title'>Select your options!</p>
         <br><br>
-        <form id='js-newPassForm' role='form' class='newPassForm js-newPassForm' novalidate>
+        <form id='js-newPassForm' role='form' class='newPassForm js-newPassForm' aria-label='newPassForm' novalidate>
        
-        <div class='createPassLeft js-createPassLeft col-6 checkBoxGroup required'>
+        <div class='createPassLeft js-createPassLeft col-6 checkBoxGroup aria-labelledby='passOption' required'>
         <p>Include the following:*</p>
         <br>
-        <p class='passOption'><input id='upper' type='checkbox' value='upper' class='passCheckbox'>
+        <div class='checkBx'>
+        <p class='passOption'><input id='upper' type='checkbox' value='upper' class='passCheckbox' aria-labelledby='passOption'>
         <label for='upper' class='checkboxLabel'>Upper Case Letters</label></p>
-        <p class='passOption'><input id='lower' type='checkbox' value='lower' class='passCheckbox'>
+        </div>
+        <div class='checkBx'>
+        <p class='passOption'><input id='lower' type='checkbox' value='lower' class='passCheckbox' aria-labelledby='passOption'>
         <label for='lower' class='checkboxLabel'>Lower Case Letters</label></p>
-        <p class='passOption'><input id='number' type='checkbox' value='number' class='passCheckbox'>
+        </div>
+        <div class='checkBx'>        
+        <p class='passOption'><input id='number' type='checkbox' value='number' class='passCheckbox' aria-labelledby='passOption'>
         <label for='number' class='checkboxLabel'>Numbers</label></p>
-        <p class='passOption'><input id='special' type='checkbox' value='special' class='passCheckbox'>
+        </div>
+        <div class='checkBx'>        
+        <p class='passOption'><input id='special' type='checkbox' value='special' class='passCheckbox' aria-labelledby='passOption'>
         <label for='special' class='checkboxLabel'>Special Characters</label></p>
+        </div>
         </div>
         <div class='createPassRight js-createPassRight col-6' id='passLength' role='radiogroup' aria-labelledby='passLength'>
         <p>Select your password length:*</p>  
         <br>
+        <div class='rdio'> 
         <p class='passLength'><input type='radio' id='12' name='passLength' value='12'
         class='bt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
         <label for='12' class='radioLabel'> 12 characters </label></p>
+        </div>
+        <div class='rdio'> 
         <p class='passLength'><input type='radio' id='24' name='passLength' value='24'
         class='bt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
         <label for='24' class='radioLabel'> 24 characters </label></p>
+        </div>
+        <div class='rdio'> 
         <p class='passLength'><input type='radio' id='32' name='passLength' value='32'
         class='bt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
         <label for='32' class='radioLabel'> 32 characters </label></p>
+        </div>
+        <div class='rdio'> 
         <p class='passLength'><input type='radio' id='48' name='passLength' value='48'
         class='bt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
         <label for='48' class='radioLabel'> 48 characters </label></p>
+        </div>
+        <div class='rdio'> 
         <p class='passLength'><input type='radio' id='64' name='passLength' value='64'
         class='bt20 passRadio' role='radio' aria-checked='false' aria-labelledby='passLength' required>
         <label for='64' class='radioLabel'> 64 characters </label></p>
+        </div>
         </div>
         <br><br><br>
         <div class='passPhraseButton'>
@@ -55,7 +74,7 @@ function newPassOptions()    {
         <br>
         <p>* = Required</p>
         </div>
-        <div class='hiddenCheckAlert'>
+        <div class='hiddenCheckAlert' role='dialog'>
         <a id='openPassLengthModal' href='#passLengthModal'></a>
             <div id='passLengthModal' class='pageModal modalContent'>
                 <div>
@@ -80,7 +99,6 @@ function newPassOptions()    {
 function createNewPass()  {
     
     $('.js-newPassOops').unbind().click(function(event)  {
-       console.log('backClicked')
        
        event.preventDefault();
        

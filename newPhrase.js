@@ -2,12 +2,11 @@
 function newPhraseOptions()    {
 
     $('.js-infoBox').html(
-        `<span class='titleInfo'><h2>Tips for passphrases:</h2>
-        A strong passphrase is a random combination of words that are meaningless together. The more unpredictable the better!
+        `<span class='titleInfo' role='Presentation'><h2>Tips for passphrases:</h2>
+        <h3>A strong passphrase is a random combination of words that are meaningless together. The more unpredictable the better!
 
-        No matter how strong your previous password may be, its appearance in a password dictionary makes it an easy target for hackers. 
-        <br>
-        Get started below!
+        No matter how strong your previous password may be, its appearance in a password dictionary makes it an easy target for hackers.  Get started below!
+        </h3>
         </span>
         `);
 
@@ -15,65 +14,79 @@ function newPhraseOptions()    {
         `<p class='newPass-title'>Select your options!</p>
         <br><br>
 
-        <form id='js-newPhraseForm' role='form' class='newPhraseForm js-newPhraseForm' novalidate>
+        <form id='js-newPhraseForm' role='form' class='newPhraseForm js-newPhraseForm' aria-label='newPhraseForm' novalidate>
         <div class='createPassLeft js-createPassLeft col-4 checkBoxGroup required'>
         <p>Include the following:</p>
         <br>
 
-        <p class='phraseOption'><input id='letAnywhere' type='checkbox' value='&whenUp=Anywhere' class='bt30 passCheckbox'>
+        <div class='checkBx'>
+        <p class='phraseOption'><input id='letAnywhere' type='checkbox' value='&whenUp=Anywhere' class='bt30 passCheckbox' aria-labelledby='phraseOption'>
         <label for='letAnywhere'>Include Upper Case</label></p>
-
-        <p class='phraseOption'><input id='numAnywhere' type='checkbox' value='&whenNum=Anywhere' class='bt30 passCheckbox'>
+        </div>
+        <div class='checkBx'>
+        <p class='phraseOption'><input id='numAnywhere' type='checkbox' value='&whenNum=Anywhere' class='bt30 passCheckbox' aria-labelledby='phraseOption'>
         <label for='numAnywhere'>Include Random Numbers</label></p>
-
-        <p class='phraseOption'><input id='noSpace' type='checkbox' value='&sp=false' class='bt30 passCheckbox'>
+        </div>
+        <div class='checkBx'>
+        <p class='phraseOption'><input id='noSpace' type='checkbox' value='&sp=false' class='bt30 passCheckbox' aria-labelledby='phraseOption'>
         <label for='noSpace'>No Spaces</label></p>
-       
+        </div>
+        
         </div>
 
         <div class='createPassCenter js-createPassCenter col-4' id='numWords' role='radiogroup' aria-labelledby='numWords'>
         <p>Select the number of words to include:*</p>  
         <br>
+        <div class='rdio'> 
         <p class='phraseNumWords'><input type='radio' id='10' name='numWords' value='&wc=10'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
         <label for='10'> 10 Words </label></p>
-        
+        </div>
+        <div class='rdio'> 
         <p class='phraseNumWords'><input type='radio' id='15' name='numWords' value='&wc=15'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
         <label for='15'> 15 Words </label></p>
-
+        </div>
+        <div class='rdio'> 
         <p class='phraseNumWords'><input type='radio' id='20' name='numWords' value='&wc=20'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
         <label for='20'> 20 Words </label></p>
-
+        </div>
+        <div class='rdio'> 
         <p class='phraseNumWords'><input type='radio' id='25' name='numWords' value='&wc=25'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
         <label for='25'> 25 Words </label></p>
-
+        </div>
+        <div class='rdio'> 
         <p class='phraseNumWords'><input type='radio' id='30' name='numWords' value='&wc=30'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='numWords' required>
         <label for='30'> 30 Words </label></p>
-
+        </div>
         </div>
 
         <div class='createPassRight js-createPassRight col-4' id='passStrength' role='radiogroup' aria-labelledby='passStrength'>
         <p>Select the minimum number of characters:*</p>  
         <br>
+        <div class='rdio'> 
         <p class='phraseLength'><input type='radio' id='min20' name='passStrength' value='&minCH=20'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
         <label for='min20'> 20 </label></p>
-
+        </div>
+        <div class='rdio'> 
         <p class='phraseLength'><input type='radio' id='min40' name='passStrength' value='&minCH=40'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
         <label for='min40'> 40 </label></p>
-
+        </div>
+        <div class='rdio'> 
         <p class='phraseLength'><input type='radio' id='min80' name='passStrength' value='&minCH=80'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
         <label for='min80'> 80 </label></p>
-        
+        </div>
+        <div class='rdio'> 
         <p class='phraseLength'><input type='radio' id='min160' name='passStrength' value='&minCH=160'
         class='bt30 passRadio' role='radio' aria-checked='false' aria-labelledby='passStrength' required>
         <label for='min160'> 160 </label></p>
+        </div>
         </div>
         <br><br><br><br>
         <div class='passPhraseButton'>
@@ -87,7 +100,7 @@ function newPhraseOptions()    {
         <br>
         <p>* = Required</p>
         </div>
-        <div class='hiddenCheckAlert'>
+        <div class='hiddenCheckAlert' role='dialog'>
         <a id='openNumWordsModal' href='#numWordsModal'></a>
             <div id='numWordsModal' class='pageModal modalContent'>
                 <div>

@@ -42,11 +42,10 @@
         
         <div role='presentation' class='whatDo js-whatDo row'>
             <div class='leftSide leftWhatDo js-leftWhatDo col-6'>
-                <p class='infoBox js-infoBox'></p>
-               
-                    <div class='feedback col-12'><br><a href='mailto:brotherfatcake@brownscastle.com?subject=AppFeedback' target='_blank'>E-mail Feedback</a></div>
-                
-                 </div>
+                <p class='infoBox js-infoBox'>
+                    <!--tips and information will display here as user navigates pages-->
+                </p>
+            </div>
                 <div class='rightSide rightWhatDo js-rightWhatDo col-6'>
                     <img class='passwordLock' src='https://www.theonlinemom.com/wp-content/uploads/2014/07/creating-safe-passwords.jpg' alt='Password key image'>
                 </div>
@@ -69,7 +68,7 @@
                     <form id="js-checkPass" role="form" class="checkPass js-checkPass">
                         <fieldset name="Check Password">
                             <legend>Check Password</legend>
-                            <button type="submit"  class="bt10 checkSubmit js-checkSubmit"><h3 class='startTitle'>Check Existing</h3></button>
+                            <button type="submit"  class="bt10 checkSubmit js-checkSubmit" tabindex=0><h3 class='startTitle'>Check Existing</h3></button>
                         </fieldset>
                     </form>
                 </div>
@@ -77,18 +76,19 @@
                     <form id="js-newPass" role="form" class="newPass js-newPass">
                         <fieldset name="New Password">
                             <legend>New Password</legend>
-                            <button type="submit"  class="bt10 newSubmit js-newSubmit"><h3 class='startTitle'>Generate New</h3>
+                            <button type="submit"  class="bt10 newSubmit js-newSubmit" tabindex=0><h3 class='startTitle'>Generate New</h3>
                             </button>
                         </fieldset>
                     </form>
                 </div>
             </div>
-            <div role='presentation' class='howDoRow row'>
-                 <h4><a href='#openModal' class='howWeDoLink js-howWeDoLink'>How do we do it? Click here to find out.</a></h4>
+            <div role='dialog' class='howDoRow row'>
+                 <h3><a href='#openModal' class='howWeDoLink js-howWeDoLink' tabindex=0>How do we do it? Click here to find out.</a></h3>
                     <div id='openModal' class='pageModal modalContent'>
                          <div>
                               <a href='#close' title='Close' class='close'>Close</a>
-                              <h2 class='howWeModalTitle'>How we do it</h2>
+                              <h2 class='howWeModalTitle'>How we do it:</h2>
+                        <br>
                          <p><h4>Checking Passwords:</h4> We convert the password you enter into a new alphanumeric string and send the first five characters of 
                         that string to <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a>.  In return, they match those five 
                         characters and return to us all string values which started with the first five characters we initially sent.  From there a 
@@ -120,3 +120,5 @@
 
 
 </html>
+
+

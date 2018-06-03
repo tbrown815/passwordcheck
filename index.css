@@ -74,7 +74,6 @@ fieldset, legend  {
   margin-top: 2%;
 }
 
-
 li, .passOption, .passLength, .phraseLength, .phraseNumWords, .phraseOption, .passwordEntry  {
   text-align: left;
 }
@@ -90,6 +89,13 @@ li, .passOption, .passLength, .phraseLength, .phraseNumWords, .phraseOption, .pa
 .passBox, .whatDo, .toDo {
   padding: 10px;
   margin-bottom: 20px !important;
+}
+
+.showPassCheckBox  {
+  margin-top: 5px;
+  margin-left: 5px;
+  text-align: left;
+  left: -230px;
 }
 
 .passMagic, .goodNewsBadNews  {
@@ -115,11 +121,7 @@ li, .passOption, .passLength, .phraseLength, .phraseNumWords, .phraseOption, .pa
   margin-top: 10px;
   margin-left: 20%;
   margin-right: 20%;
-}
-
-.showPassCheckBox  {
-  margin-top: 5px;
-  margin-left: 5px;
+  text-align: center;
 }
 
 .passCheckfield {
@@ -175,7 +177,7 @@ a:link, a:visited  {
   color: aliceblue;
 }
 
-input:focus, button:focus, a:focus, img:focus   {
+input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-focusring   {
   outline: 3px double aliceblue;
 }
 
@@ -271,37 +273,137 @@ input:focus, button:focus, a:focus, img:focus   {
   font-size: 24px;
 }
 
-/*HT for custom radios/checks - http://selfteach.me/customizing-radio-buttons-checkboxes/ */ 
-input[type=radio] {
-	display: none;
+
+/*HT for custom radios/checks - https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3*/
+
+.checkBx input[type='checkbox']  {
+  opacity: 0;
 }
 
-input[type=radio] + label {
-	background: url('radio-button-unchecked.png') left top no-repeat;
-  display: block;
-	min-height: 28px;
-  padding-left: 35px;
-  line-height: 25px;
+.checkBx label  {
+  position: relative;
+  display: inline-block;
+  padding-left: 22px;
 }
 
-input[type=radio]:checked + label {
-  background: url('radio-button-checked_v3.png') left top no-repeat;
+.checkBx label::before  {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border: 1px solid;   
 }
 
-input[type=checkbox]  {
-	display: none;
+.checkBx label::after {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  color: #7cdcde;
+  background-color: #7cdcde;
 }
 
-input[type=checkbox] + label  {
-	background: url('checkbox-unchecked.png') left top no-repeat;	display: block;
-	min-height: 28px;
-  padding-left: 35px;
-  line-height: 25px;
+.checkBx label {
+  position: relative;
 }
 
-input[type=checkbox]:checked + label  {
-  background: url('checkbox-checked_v3.png') left top no-repeat;
+.checkBx label::before,
+.checkBx label::after {
+  position: absolute;
 }
+
+/*Outer-box*/
+.checkBx label::before {
+  top: 3px;
+  left: 1px;
+}
+
+/*Checkmark*/
+.checkBx label::after {
+  left: 2px;
+  top: 4px;
+}
+
+/*Hide the checkmark by default*/
+.checkBx input[type="checkbox"] + label::after {
+  content: none;
+}
+/*Unhide the checkmark on the checked state*/
+.checkBx input[type="checkbox"]:checked + label::after {
+  content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.checkBx input[type="checkbox"]:focus + label::before {
+  outline: 3px double aliceblue;
+}   
+
+
+.rdio input[type='radio']  {
+  opacity: 0;
+}
+
+.rdio label  {
+  position: relative;
+  display: inline-block;
+  padding-left: 22px;
+}
+
+.rdio label::before  {
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border-radius: 10px;
+  border: 1px solid;   
+}
+
+.rdio label::after {
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border: 1px solid aliceblue;
+  border-radius: 10px;
+  color: #7cdcde;
+  background-color: #7cdcde;
+}
+
+.rdio label {
+  position: relative;
+}
+
+.rdio label::before,
+.rdio label::after {
+  position: absolute;
+}
+
+/*Outer-box*/
+.rdio label::before {
+  top: 3px;
+  left: 1px;
+}
+
+/*Checkmark*/
+.rdio label::after {
+  left: 2px;
+  top: 4px;
+}
+
+/*Hide the checkmark by default*/
+.rdio input[type="radio"] + label::after {
+  content: none;
+}
+
+/*Unhide the checkmark on the checked state*/
+.rdio input[type="radio"]:checked + label::after {
+  content: "";
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.rdio input[type="radio"]:focus + label::before {
+  outline: 3px double aliceblue;
+}   
 
 /* for veiwport adjusting background*/
 .bg {
@@ -348,6 +450,13 @@ input[type=checkbox]:checked + label  {
     margin-left: 5%;
   }
 
+  .showPassCheckBox  {
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: left;
+    left: -8px;
+    font-size: 90%;
+  }
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
@@ -358,6 +467,13 @@ input[type=checkbox]:checked + label  {
 
   .createPassLeft, .createPassCenter, .createPassRight  {
     margin-top: 20px;
+  }
+
+  .showPassCheckBox  {
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: left;
+    left: -150px;
   }
 
 }

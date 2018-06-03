@@ -31,30 +31,36 @@ function getStarted() {
       
        $('.js-passMagic').html(
          `<form id='js-passMagicCheck' role='form' class='passMagicCheck js-passMagicCheck' novalidate>
-           <label class='passMagicCheckTitle' for='passCheckfield'>Check your Password</label>
-           <br>
-           <div class='passwordEntry'>
-           <input required class="passCheckfield js-passCheckfield" type="password" name="passCheckfield" placeholder="Enter a password to check here..."/> 
-           <br>
-           <input type='checkbox' name='showPassword' id='showPassword' class='showPassCheckBox'>
-           <label class='showPassCheckBox js-showPassCheckBox' for='showPassword' role='checkbox' aria-labelby='showPassword'>
-           Show Password
-           </label>
-           </div>
-           <br>
-           <button type="submit"  class="bt20 checkSubmit js-checkSubmit">Click to Check</button>   
-           <br><br>
-           <a href='index.html'>Start Over?</a>
-           </form>
+            <div class='passwordEntry' role='presentation'>
+              <label class='passMagicCheckTitle' for='passCheckfield'>
+                Check your Password 
+              </label>
+              <br><br>
+              <input required class="passCheckfield js-passCheckfield" type="password" name="passCheckfield" placeholder="Enter a password to check here..." tabindex=0/> 
+              <br>
+              <div class='checkBoxGroup checkBx' checkBoxGroup>
+                <input type='checkbox' name='showPassword' id='showPassword' class='showPassCheckBox' tabindex=0/>
+                <label class='showPassCheckBox js-showPassCheckBox' for='showPassword' role='checkbox' aria-labelby='showPassword'>
+                Show Password
+                </label>
+              </div>
+            </div>
+            <br>
+            <button type="submit"  class="bt20 checkSubmit js-checkSubmit" tabindex=0>Click to Check</button>   
+            <br><br>
+              <div class='startOverlink'>
+                <a href='index.html' tabindex=0>Start Over?</a>
+              </div>
+          </form>
           
-           <div class='hiddenCheckAlert'>
+           <div class='hiddenCheckAlert' role='dialog'>
             <a id='openPassCheckModal' href='#passCheckModal'></a>
-            <div id='passCheckModal' class='pageModal modalContent'>
-            <div>
-            <a href='#' title='Close' class='close'>Close</a>
-            <h2 class='modalTitle'>You must enter at least one character!</h2>
-            </div>
-            </div>
+             <div id='passCheckModal' class='pageModal modalContent'>
+               <div>
+                 <a href='#' title='Close' class='close'>Close</a>
+                  <h2 class='modalTitle'>You must enter at least one character!</h2>
+               </div>
+             </div>
             </div>
         `);
 
@@ -123,7 +129,7 @@ function displayResults(match)  {
       $('.js-passMagic').addClass('hidden');
       $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
       $('.js-infoBox').html(
-        `<span class='titleInfo'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
+        `<span class='titleInfo' role='Presentation'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
         or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
       $('.js-goodNewsBadNews').html(
@@ -143,7 +149,7 @@ function displayResults(match)  {
       $('.js-passMagic').addClass('hidden');
       $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
       $('.js-infoBox').html(
-        `<span class='titleInfo'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
+        `<span class='titleInfo'  role='Presentation'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
         or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
       $('.js-goodNewsBadNews').html(
