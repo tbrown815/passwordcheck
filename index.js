@@ -15,8 +15,8 @@ $.getScript('checkPwned.js', function(data)  {
   
 function getStarted() {
       $('.js-infoBox').html(
-        `<span class='titleInfo'><h2>Enter a password to compare against a database of known compromised passwords or 
-        generate a new <span class='emph'>secure</span> password or passphrase.  Make a selection below to get started!</h2></span>
+        `<span class='titleInfo'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
+        or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
 
       $('.js-checkPass').unbind().submit(function(event)   {
@@ -43,7 +43,7 @@ function getStarted() {
            </div>
            <br>
            <button type="submit"  class="bt20 checkSubmit js-checkSubmit">Click to Check</button>   
-           <br>
+           <br><br>
            <a href='index.html'>Start Over?</a>
            </form>
           
@@ -123,16 +123,16 @@ function displayResults(match)  {
       $('.js-passMagic').addClass('hidden');
       $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
       $('.js-infoBox').html(
-        `<span class='titleInfo'><h2>Enter a password to compare against a database of known compromised passwords or 
-        generate a new <span class='emph'>secure</span> password or passphrase.  Make a selection below to get started!</h2></span>
+        `<span class='titleInfo'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
+        or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
       $('.js-goodNewsBadNews').html(
         `<h2  class='warning'>WARNING!</h2>
         <br>
         <p>We're sorry to inform you that the password <span class='emph'>WAS</span> found in a database of compromised passwords.</p>
         <br>
-        <p>This does not mean you have been compromised, only that the password provided has been detected in the database.
-        If you are seeing this message it is a good idea to generate a different password.</p>
+        <p>This does not mean that your accounts have been compromised, only that the password provided has been detected in the database.
+        If you are seeing this message you may want to consider creating a new secure password or passphrase.</p>
         <br>
         
         
@@ -143,16 +143,18 @@ function displayResults(match)  {
       $('.js-passMagic').addClass('hidden');
       $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
       $('.js-infoBox').html(
-        `<span class='titleInfo'><h2>Enter a password to compare against a database of known compromised passwords or 
-        generate a new <span class='emph'>secure</span> password or passphrase.  Make a selection below to get started!</h2></span>
+        `<span class='titleInfo'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
+        or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
       $('.js-goodNewsBadNews').html(
         `<h2 class='goodNews'>GOOD NEWS!</h2>
         <br>
-        <p>The password was <span class='emph'>NOT</span> found in a database of compromised passwords.</p>
+        <p>The generated data was <span class='emph'>NOT</span> found in a database of compromised passwords.</p>
         <br>
-        <p>This does not necessarily mean your password is good, only that it didn't appear in the database. You can continue 
-        to use this password, or if you would like, you can generate a new one.</p>
+        <p>This does not mean your password is strong or secure, but rather it does not appear in a database of known compromised passwords. 
+        You may want to consider creating a new secure password or passphrase to help protect your accounts.
+
+        Click below to check another password or generate a new one!</p>
         <br>
         
         `);

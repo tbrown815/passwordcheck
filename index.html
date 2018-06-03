@@ -42,32 +42,8 @@
         
         <div role='presentation' class='whatDo js-whatDo row'>
             <div class='leftSide leftWhatDo js-leftWhatDo col-6'>
-                <p class='infoBox js-infoBox'>
-
-                    </p>
-                    <br>
-                    <h4><a href='#openModal' class='js-howWeDoLink'>How do we do it? Click here to find out.</a></h4>
-                    <div id='openModal' class='pageModal modalContent'>
-                        <div>
-                            <a href='#close' title='Close' class='close'>Close</a>
-                            <h2 class='howWeModalTitle'>How we do it</h2>
-                            <p><h4>Checking Passwords:</h4> We convert the password you enter into a new alphanumeric string and send the first five characters of 
-                                that string to <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a>.  In return, they match those five 
-                                characters and return to us all string values which started with the first five characters we initially sent.  From there a 
-                                comparison is done in the browser and we inform you if the password entered was present in the 
-                                <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a> database.
-                            </p>
-                            <br>
-                            <p><h4>Creating new Passwords:</h4> We give you the choice of a traditional password or 
-                                a <a href='https://en.wikipedia.org/wiki/Passphrase' target='_blank'>passphrase</a>.  Once you determine your preferred type,
-                                you select different options and we send a request to <a href='https://makemeapassword.ligos.net' target='_blank'>'makemeapassword.ligos.net'</a> 
-                                or <a href='https://randomuser.me' target='_blank'>'randomuser.me'</a>.  They, in return, generate and return a password based 
-                                on your specified parameters. Once the password is received by the browser we run it through the Check Password process for 
-                                good measure. 
-                            </p>
-                        </div>
-                    </div>  
-
+                <p class='infoBox js-infoBox'></p>
+               
                     <div class='feedback col-12'><br><a href='mailto:brotherfatcake@brownscastle.com?subject=AppFeedback' target='_blank'>E-mail Feedback</a></div>
                 
                  </div>
@@ -107,6 +83,29 @@
                     </form>
                 </div>
             </div>
+            <div role='presentation' class='howDoRow row'>
+                 <h4><a href='#openModal' class='howWeDoLink js-howWeDoLink'>How do we do it? Click here to find out.</a></h4>
+                    <div id='openModal' class='pageModal modalContent'>
+                         <div>
+                              <a href='#close' title='Close' class='close'>Close</a>
+                              <h2 class='howWeModalTitle'>How we do it</h2>
+                         <p><h4>Checking Passwords:</h4> We convert the password you enter into a new alphanumeric string and send the first five characters of 
+                        that string to <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a>.  In return, they match those five 
+                        characters and return to us all string values which started with the first five characters we initially sent.  From there a 
+                        comparison is done in the browser and we inform you if the password entered was present in the 
+                        <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a> database.
+                           </p>
+                          <br>
+                          <p><h4>Creating New Passwords:</h4> We give you the choice of a traditional password or 
+                        a <a href='https://en.wikipedia.org/wiki/Passphrase' target='_blank'>passphrase</a>.  Once you determine your preferred type,
+                        you select different options and we send a request to <a href='https://makemeapassword.ligos.net' target='_blank'>'makemeapassword.ligos.net'</a> 
+                        or <a href='https://randomuser.me' target='_blank'>'randomuser.me'</a>.  They, in return, generate and return a password based 
+                        on your specified parameters. Once the password is received by the browser we run it through the Check Password process for 
+                        good measure. 
+                         </p>
+                         </div>
+                     </div>
+             </div>
      </main>
 
 

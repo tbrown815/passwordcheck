@@ -27,11 +27,13 @@ fieldset, legend  {
   font-weight: 550;
 }
 
-
-
-.title, .createPassLeft, .createPassRight, .createPassCenter, .newPhraseForm, .passBox, .leftSide, .rightSide {
+.title, .createPassLeft, .createPassRight, .createPassCenter, .newPhraseForm, .passBox, .leftSide, .rightSide, .howDoRow  {
   text-align: center;
 }
+
+.howDoRow {
+  padding: 10px;
+ }
 
 .title, .emph, .warning, .goodNews, .passPhraseWord {
   text-shadow: 1px 1px 2px black;
@@ -42,9 +44,10 @@ fieldset, legend  {
 }
 
 .passPhraseWord  {
-  overflow-wrap: break-word;
+  word-wrap: break-word;
   font-size: 20px;
 }
+
 .emph {
   font-style: italic;
   font-weight: bold;
@@ -62,7 +65,7 @@ fieldset, legend  {
   margin-top: 175px !important;
 }
 
-.title, .whatDo, .toDo, .passBox  {
+.title, .whatDo, .toDo, .passBox, .howDoRow  {
   border: 1px solid #7cdcde;
   background-color: #1A5B89;
 }
@@ -147,7 +150,6 @@ li, .passOption, .passLength, .phraseLength, .phraseNumWords, .phraseOption, .pa
   border: 1px solid #7fe0df;
   border-radius: 10px;
   color: aliceblue;
-
 }
 
 .bt20 {
@@ -255,7 +257,6 @@ input:focus, button:focus, a:focus, img:focus   {
   }
 }
 
-
 .close::after, .close::before {
   content: '-';
 }
@@ -269,7 +270,6 @@ input:focus, button:focus, a:focus, img:focus   {
   text-align: center;
   font-size: 24px;
 }
-
 
 /*HT for custom radios/checks - http://selfteach.me/customizing-radio-buttons-checkboxes/ */ 
 input[type=radio] {

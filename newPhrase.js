@@ -3,9 +3,11 @@ function newPhraseOptions()    {
 
     $('.js-infoBox').html(
         `<span class='titleInfo'><h2>Tips for passphrases:</h2>
-            <ul>
-            <li><b>Be unpredictable:</b> A strong passphrase is a random combination of words that are meaningless together.</li>
-            <li><b>Do not reuse:</b> No matter how strong your password may be, its appearance in a password dictionary makes it an easy target for hackers.</li>
+        A strong passphrase is a random combination of words that are meaningless together. The more unpredictable the better!
+
+        No matter how strong your previous password may be, its appearance in a password dictionary makes it an easy target for hackers. 
+        <br>
+        Get started below!
         </span>
         `);
 
@@ -75,7 +77,7 @@ function newPhraseOptions()    {
         </div>
         <br><br><br><br>
         <div class='passPhraseButton'>
-        <button type='submit'  class='newPhraseSubmit js-newPhraseSubmit bt20'>Create my passphrase!</button>
+        <button type='submit'  class='newPhraseSubmit js-newPhraseSubmit bt20'>Create My Passphrase!</button>
         <br>
         <button type='submit'  class='newPhraseOops js-newPhraseOops bt30' formnovalidate>Did you want a password instead?</button>
         <br>

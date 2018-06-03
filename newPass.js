@@ -2,10 +2,8 @@ function newPassOptions()    {
 
     $('.js-infoBox').html(
         `<span class='titleInfo'><h2>Tips for a strong password:</h2>
-            <ul>
-            <li>Make the password at least 12 characters long.</li>
-            <li>Include numbers, capital letters and symbols.</li>
-            <li>Don’t just use one password.</li>
+        Your new password should be at least 12 characters long, and include numbers, capital letters, and special characters. 
+        Be sure to create a new password for each of your accounts.  Get started below!
         </span>
         `);
 
@@ -47,9 +45,9 @@ function newPassOptions()    {
         </div>
         <br><br><br>
         <div class='passPhraseButton'>
-        <button type='submit'  class='newPassSubmit js-newPassSubmit bt20'>Create my Password!</button>
+        <button type='submit'  class='newPassSubmit js-newPassSubmit bt20'>Create My Password!</button>
         <br>
-        <button type='submit'  class='newPassOops js-newPassOops bt30' formnovalidate>Did you want a phrase instead?</button>
+        <button type='submit'  class='newPassOops js-newPassOops bt30' formnovalidate>Did you want a passphrase instead?</button>
         <br>
         <a href='index.html'>Start Over?</a>
         </form>
@@ -167,3 +165,4 @@ function reviewPassResults(passResponse) {
 
 
 $(newPassOptions);
+
