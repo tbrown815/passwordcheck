@@ -134,14 +134,12 @@ function displayResults(match)  {
         `);
       $('.js-goodNewsBadNews').html(
         `<h2  class='warning' aria-live='assertive'>WARNING!</h2>
-        <br>
-        <p>We're sorry to inform you that the password <span class='emph'>WAS</span> found in a database of compromised passwords.</p>
-        <br>
-        <p>This does not mean that your accounts have been compromised, only that the password provided has been detected in the database.
-        If you are seeing this message you may want to consider creating a new secure password or passphrase.</p>
-        <br>
-        
-        
+          <br>
+          <p>We're sorry to inform you that the password <span class='emph'>WAS</span> found in a database of compromised passwords.</p>
+          <br>
+          <p>This does not mean that your accounts have been compromised, only that the password provided has been detected in the database.
+          If you are seeing this message you may want to consider creating a new secure password or passphrase.</p>
+          <br>
         `);
     }
     
@@ -162,7 +160,6 @@ function displayResults(match)  {
 
         Click below to check another password or generate a new one!</p>
         <br>
-        
         `);
     }
   }
