@@ -15,7 +15,7 @@ $.getScript('checkPwned.js', function(data)  {
   
 function getStarted() {
       $('.js-infoBox').html(
-        `<span class='titleInfo'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
+        `<span class='titleInfo' aria-live='polite'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
         or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
 
@@ -133,7 +133,7 @@ function displayResults(match)  {
         or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
       $('.js-goodNewsBadNews').html(
-        `<h2  class='warning'>WARNING!</h2>
+        `<h2  class='warning' aria-live='assertive'>WARNING!</h2>
         <br>
         <p>We're sorry to inform you that the password <span class='emph'>WAS</span> found in a database of compromised passwords.</p>
         <br>
@@ -149,11 +149,11 @@ function displayResults(match)  {
       $('.js-passMagic').addClass('hidden');
       $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
       $('.js-infoBox').html(
-        `<span class='titleInfo'  role='Presentation'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
+        `<span class='titleInfo' role='Presentation'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
         or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
       $('.js-goodNewsBadNews').html(
-        `<h2 class='goodNews'>GOOD NEWS!</h2>
+        `<h2 class='goodNews'  aria-live='assertive'>GOOD NEWS!</h2>
         <br>
         <p>The generated data was <span class='emph'>NOT</span> found in a database of compromised passwords.</p>
         <br>
