@@ -165,6 +165,12 @@ li, .passOption, .passLength, .phraseLength, .phraseNumWords, .phraseOption, .pa
   transition: 0.3s;
 }
 
+.thePassword  {
+  border: 5px solid greenyellow;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .hidden {
   display: none;
 }

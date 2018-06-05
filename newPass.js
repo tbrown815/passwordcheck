@@ -176,6 +176,7 @@ function reviewPassResults(passResponse) {
         <p class='passPhraseWord'>${updatePass}</p>
         <br>
         <p>You can also click below to check an additional password/passphrase or generate a new one!</p>
+        <br>
         `);
 
     hashThePass(updatePass);
