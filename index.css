@@ -433,7 +433,7 @@ input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-
 
 /* for veiwport adjusting background*/
 .bg {
-  background-image: url("world-background.svg");
+  background-image: url("world-background2.svg.png");
 
 
   /* scaling */
