@@ -15,7 +15,7 @@ $.getScript('checkPwned.js', function(data)  {
   
 function getStarted() {
       $('.js-infoBox').html(
-        `<span class='titleInfo' aria-live='polite'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
+        `<span class='titleInfo' aria-live='polite'><h2>Make a selection below to either check a password against a database of known comprised passwords 
         or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
 
@@ -41,7 +41,7 @@ function getStarted() {
               <div class='checkBoxGroup checkBx' checkBoxGroup>
                 <input type='checkbox' name='showPassword' id='showPassword' class='showPassCheckBox' tabindex=0/>
                 <label class='showPassCheckBox js-showPassCheckBox' for='showPassword' role='checkbox' aria-labelby='showPassword'>
-                Show Password
+                <div class='showPassCheckBoxlabel js-showPassCheckBoxlabel'> Show Password </div>
                 </label>
               </div>
             </div>
@@ -129,7 +129,7 @@ function displayResults(match)  {
       $('.js-passMagic').addClass('hidden');
       $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
       $('.js-infoBox').html(
-        `<span class='titleInfo' role='Presentation'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
+        `<span class='titleInfo' role='Presentation'><h2>Make a selection below to either check a password against a database of known comprised passwords 
         or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
       $('.js-goodNewsBadNews').html(
@@ -147,7 +147,7 @@ function displayResults(match)  {
       $('.js-passMagic').addClass('hidden');
       $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
       $('.js-infoBox').html(
-        `<span class='titleInfo' role='Presentation'><h2>Choose a selection below to either check a password against a database of known comprised passwords 
+        `<span class='titleInfo' role='Presentation'><h2>Make a selection below to either check a password against a database of known comprised passwords 
         or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
       $('.js-goodNewsBadNews').html(

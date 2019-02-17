@@ -7,6 +7,7 @@
 body  {
   font-family: 'Ubuntu Mono', monospace;
   color: aliceblue;
+  line-height: 110%
 }
 
 main  {
@@ -203,7 +204,8 @@ input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-
 }
 
 .modalContent > div {
-  width: 275px;
+  width: 340px;
+  line-height: 110%;
   position: relative;
   margin: 3% auto;
   padding: 5px 20px 13px 20px;
@@ -234,6 +236,8 @@ input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-
 @media screen and (min-width: 640px) {
   .modalContent > div {
     width: 400px;
+    height: 600px;
+    line-height: 130%;
     position: relative;
     margin: 5% auto;
     padding: 5px 20px 13px 20px;
@@ -278,6 +282,12 @@ input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-
 
 
 /*HT for custom radios/checks - https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3*/
+
+.showPassCheckBoxlabel {
+  margin-top: 4%;
+  margin-left: 2px;
+
+}
 
 .checkBx input[type='checkbox']  {
   opacity: 0;
@@ -410,9 +420,8 @@ input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-
 
 /* for veiwport adjusting background*/
 .bg {
-  /* rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
+  background-image: url("world-background.svg");
+
 
   /* scaling */
   width: 100%;
@@ -420,10 +429,11 @@ input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-
 
   /* position */
   position: fixed;
-  top: 0;
-  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   z-index: -1;
+
 }
 
 @media only screen and (min-width: 640px){
@@ -462,6 +472,13 @@ input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-
     left: -8px;
     font-size: 90%;
   }
+
+
+.showPassCheckBoxlabel {
+  margin-top: 1.5%;
+  margin-left: 2px;
+}
+
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1023px)  {
