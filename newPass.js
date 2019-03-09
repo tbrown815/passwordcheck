@@ -1,4 +1,4 @@
-function newPassOptions()    {
+function newPassOptions() {
 
     $('.js-infoBox').html(
         `<span class='titleInfo' role='Presentation' aria-live='assertive'><h2>Tips for a strong password:</h2>
@@ -91,40 +91,40 @@ function newPassOptions()    {
             </div>
         </div>
         `);
-        
-        createNewPass();
-    }
 
+    createNewPass();
+}
 
-function createNewPass()  {
-    
-    $('.js-newPassOops').unbind().click(function(event)  {
-       
-       event.preventDefault();
-       
-       newPhraseOptions();
+//accept selected inputs from user to genereate password
+function createNewPass() {
+
+    $('.js-newPassOops').unbind().click(function (event) {
+
+        event.preventDefault();
+
+        newPhraseOptions();
     });
 
-    $('.js-newPassForm').unbind().submit(function(event)  {
+    $('.js-newPassForm').unbind().submit(function (event) {
 
 
         checkedCharType = $("input[type=checkbox]:checked").length;
         checkedPassLength = $("input[type=radio]:checked").length;
 
-        if(!checkedCharType) {
+        if (!checkedCharType) {
             $('#openCharTypeModal')[0].click();
             return false;
-            }    
+        }
 
-        
-        if(!checkedPassLength) {
+
+        if (!checkedPassLength) {
             $('#openPassLengthModal')[0].click();
             return false;
-            }   
-        
+        }
+
         event.preventDefault();
 
-        
+
         let userSelected = [
             $('input[id=upper]:checked').val(),
             $('input[id=lower]:checked').val(),
@@ -140,29 +140,29 @@ function createNewPass()  {
         let passQueryString = filterUserSelected.toString();
 
         callPassApi(passQueryString, reviewPassResults);
-        
-    });   
-    
+
+    });
+
 }
+//call api to generate the password
+function callPassApi(passQueryString, callback) {
 
-function callPassApi(passQueryString, callback)  {
+    let query = {
+        password: `${passQueryString}`
+    };
 
- let query = {
-     password: `${passQueryString}`
-   };
-   
- $.getJSON(RANDOMPASS, query, callback);
+    $.getJSON(RANDOMPASS, query, callback);
 
 }
 
 function reviewPassResults(passResponse) {
 
-    const origPass = passResponse.results.map(        
-        function(passResults, index) {
-            
+    const origPass = passResponse.results.map(
+        function (passResults, index) {
+
             return `${passResults.login.password}`;
         }
-      )
+    )
 
     let password = origPass.toString();
 
@@ -179,6 +179,7 @@ function reviewPassResults(passResponse) {
         <br>
         `);
 
+    //send password to be hashed and checked against HIBP     
     hashThePass(updatePass);
 }
 

@@ -1,5 +1,5 @@
 
-function newPhraseOptions()    {
+function newPhraseOptions() {
 
     $('.js-infoBox').html(
         `<span class='titleInfo' role='Presentation' aria-live='assertive'><h2>Tips for passphrases:</h2>
@@ -118,35 +118,35 @@ function newPhraseOptions()    {
         `);
     createNewPhrase();
 }
+//accept selected inputs from user to genereate passphrase
+function createNewPhrase() {
 
-function createNewPhrase()  {
-
-    $('.js-newPhraseOops').unbind().click(function(event)  {
+    $('.js-newPhraseOops').unbind().click(function (event) {
         console.log('backClicked')
-        
-        event.preventDefault();
-        
-        newPassOptions();
-     });
-    
-    $('.js-newPhraseForm').unbind().submit(function(event)  {
-            checkedNumWords = $("input[name='numWords']:checked").length;
-            checkedPassStrength = $("input[name='passStrength']:checked").length;
-    
-       
-            if(!checkedNumWords) {
-                $('#openNumWordsModal')[0].click();
-                return false;
-                } 
-    
-            if(!checkedPassStrength) {
-                $('#openPassStrengthModal')[0].click();
-                return false;
-                } 
 
         event.preventDefault();
-        
-        
+
+        newPassOptions();
+    });
+
+    $('.js-newPhraseForm').unbind().submit(function (event) {
+        checkedNumWords = $("input[name='numWords']:checked").length;
+        checkedPassStrength = $("input[name='passStrength']:checked").length;
+
+
+        if (!checkedNumWords) {
+            $('#openNumWordsModal')[0].click();
+            return false;
+        }
+
+        if (!checkedPassStrength) {
+            $('#openPassStrengthModal')[0].click();
+            return false;
+        }
+
+        event.preventDefault();
+
+
         let userSelected = [
             $('input[id=letAnywhere]:checked').val(),
             $('input[id=numAnywhere]:checked').val(),
@@ -154,37 +154,37 @@ function createNewPhrase()  {
             $('input[name=numWords]:checked').val(),
             $('input[name=passStrength]:checked').val()
         ];
-        
+
         let filterUserSelected = userSelected.filter(function (val) {
             return ((val != undefined) || (val != null));
         });
-        
+
         let phraseqQeryString = filterUserSelected.toString();
 
         let requestString = phraseqQeryString.replace(/,/g, '');
 
         callMakeApi(requestString, reviewPhraseResults);
-        
-    });   
-    
-}
 
-function callMakeApi(requestString, callback)  {
-    
-  
+    });
+
+}
+//call api to generate the passphrase
+function callMakeApi(requestString, callback) {
+
+
     $.getJSON(MAKEMEPASS, requestString, callback);
-    
+
 }
 
 function reviewPhraseResults(passPhrase) {
-    
-    const origPhrase = passPhrase.pws.map(        
-        function(pws, index) {
-            
+
+    const origPhrase = passPhrase.pws.map(
+        function (pws, index) {
+
             return `${pws}`;
         }
     )
-    
+
     let phrase = origPhrase.toString();
 
     $('.js-thePassword').removeClass('hidden')
@@ -197,9 +197,9 @@ function reviewPhraseResults(passPhrase) {
          <p>You can also click below to check another password/passphrase or generate a new one!</p>
 
         `);
-        
-        hashThePass(phrase);
-    }
+    //send passphrase to be hashed and checked against HIBP     
+    hashThePass(phrase);
+}
 
-   
-   $(newPhraseOptions);
+
+$(newPhraseOptions);

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang='en' dir='ltr'>
-  <head>
+
+<head>
     <meta charset='utf-8'>
     <meta name='description' content='password checker and generator' />
 
@@ -10,121 +11,137 @@
     <title>Do you need a BETTER password?</title>
 
     <!--favicon-->
-    <link rel="shortcut icon" type="image/png" href="siteFav.ico"/>
+    <link rel="shortcut icon" type="image/png" href="siteFav.ico" />
 
     <!-- fonts  -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-    
-        <!-- reset -->
-    <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css'>
+
+    <!-- reset -->
+    <link rel='stylesheet' type='text/css'
+        href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css'>
 
     <!-- styles -->
     <link href='index.css' rel='stylesheet' type='text/css' />
     <link href='grid_v2.css' rel='stylesheet' type='text/css' />
 
     <!-- jQuery -->
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'
+        integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
 
-  </head>
+</head>
 
-  <body>
-      <div class="bg"></div>
-      <header role='heading' class='row' aria-level='1'>
+<body>
+    <div class="bg"></div>
+    <header role='heading' class='row' aria-level='1'>
 
-      </header>
-    
+    </header>
+
     <nav class='title col-12'>
-        <h1>Do you need a <span class='emph'>BETTER</span> password?</h1>
+        <h1 class='siteTitle js-siteTitle'>Do you need a <span class='emph'>BETTER</span> password?</h1>
     </nav>
-    
-    
+
+
     <main role='main'>
-        
-        
+
+
         <div role='presentation' class='whatDo js-whatDo row'>
             <div class='leftSide leftWhatDo js-leftWhatDo col-6'>
                 <p class='infoBox js-infoBox'>
                     <!--tips and information will display here as user navigates pages-->
                 </p>
             </div>
-                <div class='rightSide rightWhatDo js-rightWhatDo col-6'>
-                    <img class='passwordLock' src='https://www.theonlinemom.com/wp-content/uploads/2014/07/creating-safe-passwords.jpg' alt='Password key image'>
-                </div>
+            <div class='rightSide rightWhatDo js-rightWhatDo col-6'>
+                <img class='passwordLock'
+                    src='https://www.theonlinemom.com/wp-content/uploads/2014/07/creating-safe-passwords.jpg'
+                    alt='Password key image'>
             </div>
+        </div>
 
-            <div role='presentation' class='passBox js-passBox row hidden'>
-                <div class='passMagic js-passMagic col-12'>
-                        <!--This is where the password info will display-->
-                </div>
-                <div class='goodNewsBadNews js-goodNewsBadNews col-12 hidden'>
-                    <!--This is where the result info will display-->
-                </div>
-                <div class='thePassword js-thePassword col-12 hidden'>
-                    <!--This is where the result info will display-->
-                </div>
+        <div role='presentation' class='passBox js-passBox row hidden'>
+            <div class='passMagic js-passMagic col-12'>
+                <!--This is where the password info will display-->
             </div>
+            <div class='goodNewsBadNews js-goodNewsBadNews col-12 hidden'>
+                <!--This is where the result info will display-->
+            </div>
+            <div class='thePassword js-thePassword col-12 hidden'>
+                <!--This is where the result info will display-->
+            </div>
+        </div>
 
-            <div role='presentation' class='toDo js-toDo row'>
-                <div class='leftSide leftToDo js-leftToDo col-6'>
-                    <form id="js-checkPass" role="form" class="checkPass js-checkPass">
-                        <fieldset name="Check Password">
-                            <legend>Check Password</legend>
-                            <button type="submit"  class="bt10 checkSubmit js-checkSubmit" tabindex=0><h3 class='startTitle'>Check Existing</h3></button>
-                        </fieldset>
-                    </form>
-                </div>
-                <div class='rightSide rightToDo js-rightToDo col-6'>
-                    <form id="js-newPass" role="form" class="newPass js-newPass">
-                        <fieldset name="New Password">
-                            <legend>New Password</legend>
-                            <button type="submit"  class="bt10 newSubmit js-newSubmit" tabindex=0><h3 class='startTitle'>Generate New</h3>
-                            </button>
-                        </fieldset>
-                    </form>
-                </div>
+        <div role='presentation' class='toDo js-toDo row'>
+            <div class='leftSide leftToDo js-leftToDo col-6'>
+                <form id="js-checkPass" role="form" class="checkPass js-checkPass">
+                    <fieldset name="Check Password">
+                        <legend>Check Password</legend>
+                        <button type="submit" class="bt10 checkSubmit js-checkSubmit" tabindex=0>
+                            <h3 class='startTitle'>Check Existing</h3>
+                        </button>
+                    </fieldset>
+                </form>
             </div>
-            <div role='dialog' class='howDoRow row'>
-                 <h3><a href='#openModal' class='howWeDoLink js-howWeDoLink' tabindex=0>How do we do it? Click here to find out.</a></h3>
-                    <div id='openModal' class='pageModal modalContent'>
-                         <div>
-                              <a href='#' title='Close' class='close'>Close</a>
-                              <h2 class='howWeModalTitle' aria-live='assertive'>How we do it:</h2>
-                        <br>
-                         <p><h4>Checking Passwords:</h4> We convert the password you enter into a new alphanumeric string and send the first five characters of 
-                        that string to <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a>.  In return, they match those five 
-                        characters and return to us all string values which started with the first five characters we initially sent.  From there a 
-                        comparison is done in the browser and we inform you if the password entered was present in the 
+            <div class='rightSide rightToDo js-rightToDo col-6'>
+                <form id="js-newPass" role="form" class="newPass js-newPass">
+                    <fieldset name="New Password">
+                        <legend>New Password</legend>
+                        <button type="submit" class="bt10 newSubmit js-newSubmit" tabindex=0>
+                            <h3 class='startTitle'>Generate New</h3>
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div role='dialog' class='howDoRow row'>
+            <h3><a href='#openModal' class='howWeDoLink js-howWeDoLink' tabindex=0>How do we do it? Click here to find
+                    out.</a></h3>
+            <div id='openModal' class='pageModal modalContent'>
+                <div>
+                    <a href='#' title='Close' class='close'>Close</a>
+                    <h2 class='howWeModalTitle' aria-live='assertive'>How we do it:</h2>
+                    <br>
+                    <p>
+                        <h4>Checking Passwords:</h4> We convert the password you enter into a new alphanumeric string
+                        and send the first five characters of
+                        that string to <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a>. In
+                        return, they match those five
+                        characters and return to us all string values which started with the first five characters we
+                        initially sent. From there a
+                        comparison is done in the browser and we inform you if the password entered was present in the
                         <a href='https://haveibeenpwned.com' target='_blank'>'haveibeenpwned.com'</a> database.
-                           </p>
-                          <br>
-                          <p><h4>Creating New Passwords:</h4> We give you the choice of a traditional password or 
-                        a <a href='https://en.wikipedia.org/wiki/Passphrase' target='_blank'>passphrase</a>.  Once you determine your preferred type,
-                        you select different options and we send a request to <a href='https://makemeapassword.ligos.net' target='_blank'>'makemeapassword.ligos.net'</a> 
-                        or <a href='https://randomuser.me' target='_blank'>'randomuser.me'</a>.  They, in return, generate and return a password based 
-                        on your specified parameters. Once the password is received by the browser we run it through the Check Password process for 
-                        good measure. 
-                         </p>
-                         </div>
-                     </div>
-                    </div>
-                    
-                </main>
-                
-                                    <footer class='footer'>
-                                            <a href="https://www.freepik.com/free-photos-vectors/background" target="_blank">Background vector created by rawpixel.com - www.freepik.com</a>
-                                    </footer>
-                
-     
-    </body>
+                    </p>
+                    <br>
+                    <p>
+                        <h4>Creating New Passwords:</h4> We give you the choice of a traditional password or
+                        a <a href='https://en.wikipedia.org/wiki/Passphrase' target='_blank'>passphrase</a>. Once you
+                        determine your preferred type,
+                        you select different options and we send a request to <a
+                            href='https://makemeapassword.ligos.net' target='_blank'>'makemeapassword.ligos.net'</a>
+                        or <a href='https://randomuser.me' target='_blank'>'randomuser.me'</a>. They, in return,
+                        generate and return a password based
+                        on your specified parameters. Once the password is received by the browser we run it through the
+                        Check Password process for
+                        good measure.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-  <script src='SHA1.js' type='text/javascript'></script>
-  <script src='newPass.js' type='text/javascript'></script>
-  <script src='newPhrase.js' type='text/javascript'></script>
-  <script src='checkPwned.js' type='text/javascript'></script>
-  <script src='index.js' type='text/javascript'></script>
+    </main>
+
+
+    <footer class='footer row'>
+        <a href="https://www.freepik.com/free-photos-vectors/background" target="_blank">Background vector created by
+            rawpixel.com - www.freepik.com</a>
+    </footer>
+
+</body>
+
+<script src='SHA1.js' type='text/javascript'></script>
+<script src='newPass.js' type='text/javascript'></script>
+<script src='newPhrase.js' type='text/javascript'></script>
+<script src='checkPwned.js' type='text/javascript'></script>
+<script src='index.js' type='text/javascript'></script>
 
 
 
 </html>
-
-

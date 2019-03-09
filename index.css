@@ -1,272 +1,284 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body  {
-  font-family: 'Ubuntu Mono', monospace;
-  color: aliceblue;
-  line-height: 110%
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    color: aliceblue;
 }
 
+/*
 main  {
-  height: 700px;
+  height: 1200px;
 }
+*/
 
 footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  padding-left: 1%;  
-  padding-top: 2%;
-
- }
-
- footer a {
-  color: #7cdcde !important;
- }
-
-fieldset, legend  {
-  border-width: 0px;
-  font-size: 0px !important;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding-left: 1%;
 }
 
-.questions  {
-  font-size: 12px;
-  font-weight: 550;
+footer a {
+    color: #7cdcde !important;
 }
 
-.title, .createPassLeft, .createPassRight, .createPassCenter, .newPhraseForm, .passBox, .leftSide, .rightSide, .howDoRow  {
-  text-align: center;
+fieldset,
+legend {
+    border-width: 0px;
+    font-size: 0px !important;
+}
+
+.questions {
+    font-size: 12px;
+    font-weight: 550;
+}
+
+.title,
+.createPassLeft,
+.createPassRight,
+.createPassCenter,
+.newPhraseForm,
+.passBox,
+.leftSide,
+.rightSide,
+.howDoRow {
+    text-align: center;
 }
 
 .howDoRow {
-  padding: 10px;
- }
-
-.title, .emph, .warning, .goodNews, .passPhraseWord {
-  text-shadow: 1px 1px 2px black;
+    padding: 10px;
 }
 
-.emph, .passPhraseWord  {
-  color: #7cdcde;
+.title,
+.emph,
+.warning,
+.goodNews,
+.passPhraseWord {
+    text-shadow: 1px 1px 2px black;
 }
 
-.passPhraseWord  {
-  word-wrap: break-word;
-  font-size: 20px;
+.emph,
+.passPhraseWord {
+    color: #7cdcde;
+}
+
+.passPhraseWord {
+    word-wrap: break-word;
+    font-size: 20px;
 }
 
 .emph {
-  font-style: italic;
-  font-weight: bold;
- }
+    font-style: italic;
+    font-weight: bold;
+}
 
- .warning {
-   color: #FFBDBD;
- }
+.warning {
+    color: #FFBDBD;
+}
 
- .goodNews{
-  color: greenyellow;
- }
+.goodNews {
+    color: greenyellow;
+}
 
 .whatDo {
-  margin-top: 175px !important;
+    margin-top: 175px !important;
 }
 
-.title, .whatDo, .toDo, .passBox, .howDoRow  {
-  border: 1px solid #7cdcde;
-  background-color: #1A5B89;
+.title,
+.whatDo,
+.toDo,
+.passBox,
+.howDoRow {
+    border: 1px solid #7cdcde;
+    background-color: #1A5B89;
 }
 
-.rightWhatDo  {
-  margin-top: 2%;
+.rightWhatDo {
+    margin-top: 2%;
 }
 
-li, .passOption, .passLength, .phraseLength, .phraseNumWords, .phraseOption, .passwordEntry  {
-  text-align: left;
+li,
+.passOption,
+.passLength,
+.phraseLength,
+.phraseNumWords,
+.phraseOption,
+.passwordEntry {
+    text-align: left;
 }
 
-.passOption, .passLength, .phraseLength, .phraseNumWords {
-  margin-left: 30%;
+.passOption,
+.passLength,
+.phraseLength,
+.phraseNumWords {
+    margin-left: 30%;
 }
 
 .phraseOption {
-  margin-left: 20%;
+    margin-left: 20%;
 }
 
-.passBox, .whatDo, .toDo {
-  padding: 10px;
-  margin-bottom: 20px !important;
+.passBox,
+.whatDo,
+.toDo {
+    padding: 10px;
+    margin-bottom: 20px !important;
 }
 
-.showPassCheckBox  {
-  margin-top: 5px;
-  margin-left: 5px;
-  text-align: left;
-  left: -230px;
+.showPassCheckBox {
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: left;
+    left: -230px;
 }
 
-.passMagic, .goodNewsBadNews  {
-  margin-left: auto;
-  margin-right: auto;
+.passMagic,
+.goodNewsBadNews {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.leftSide, .rightSide {
-  padding: 5px;
-  font-size: 16px;
+.leftSide,
+.rightSide {
+    padding: 5px;
+    font-size: 16px;
 }
 
 .passwordLock {
-  width: 50%;
-  border: 1px solid #fbfef8;
+    width: 50%;
+    border: 1px solid #fbfef8;
 }
 
-.startTitle, .passMagicCheckTitle, .newPassTitle, .newPhrasetitle {
-  font-size: 24px;
+.startTitle,
+.passMagicCheckTitle,
+.newPassTitle,
+.newPhrasetitle {
+    font-size: 24px;
 }
 
-.passwordEntry  {
-  margin-top: 10px;
-  margin-left: 20%;
-  margin-right: 20%;
-  text-align: center;
+.passwordEntry {
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
 }
 
 .passCheckfield {
-  height: 30px;
-  border-radius: 5px;
-  width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    width: 100%;
 }
 
 ::placeholder {
-  color: #5F7181;
-  opacity: 1;
+    color: #5F7181;
+    opacity: 1;
 }
 
-.newPhraseSubmit, .newPassSubmit {
-  margin-top: 50px !important;
-  margin-bottom: 10px;
+.newPhraseSubmit,
+.newPassSubmit {
+    margin-top: 50px !important;
+    margin-bottom: 10px;
 }
 
-.bt10, .bt20, .bt30{
-  cursor: pointer;
+.bt10,
+.bt20,
+.bt30 {
+    cursor: pointer;
 }
 
-.bt10, .bt20 {
-  width: auto;
-  padding: 10px;
-  font-size: 24px;
-  background-color: #02407c;
-  border: 1px solid #7fe0df;
-  border-radius: 10px;
-  color: aliceblue;
+.bt10,
+.bt20 {
+    width: auto;
+    padding: 10px;
+    font-size: 24px;
+    background-color: #02407c;
+    border: 1px solid #7fe0df;
+    border-radius: 10px;
+    color: aliceblue;
 }
 
 .bt20 {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 .bt30 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  background-color:#1A5B89;
-  border:none; 
-  color: aliceblue;
-  padding:0!important;
-  text-decoration: underline;
-  transition: 0.3s;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #1A5B89;
+    border: none;
+    color: aliceblue;
+    padding: 0 !important;
+    text-decoration: underline;
+    transition: 0.3s;
 }
 
-.thePassword  {
-  border: 5px solid greenyellow;
-  border-radius: 10px;
-  padding: 10px;
+.thePassword {
+    border: 5px solid greenyellow;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
-a:link, a:visited  {
-  color: aliceblue;
+a:link,
+a:visited {
+    color: aliceblue;
 }
 
-input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-focusring   {
-  outline: 3px double aliceblue;
+input:focus,
+button:focus,
+a:focus,
+img:focus,
+button:-moz-focusring,
+input:-moz-focusring {
+    outline: 3px double aliceblue;
 }
 
 /*HT for modal - https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/ */
-.pageModal { 
-  position: fixed;
-  top:  0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0,0,0,0.8);
-  z-index: 99999;
-  opacity: 0;
-  transition: opacity 400ms ease-in;
-  pointer-events: none;
+
+.pageModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
 }
 
-.modalContent:target{
-  opacity: 1;
-  pointer-events: auto;
+.modalContent:target {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-.modalContent > div {
-  width: 340px;
-  line-height: 110%;
-  position: relative;
-  margin: 3% auto;
-  padding: 5px 20px 13px 20px;
-  border-radius: 10px;
-  background: #1A5B89;
-  text-align: left;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
-}
-
-.close {
-  color: #1A5B89 !important;
-	background: aliceblue;
-	line-height: 25px;
-	position: relative;
-	right: -190px;
-	text-align: center;
-	top: -5px;
-	width: 30px;
-	text-decoration: none;
-	font-weight: bold;
-	border-radius: 20px;
-  box-shadow: 1px 1px 3px #000;
-  z-index: 99999;
-  font-size: 16px;
-}
-
-@media screen and (min-width: 640px) {
-  .modalContent > div {
-    width: 400px;
-    height: 600px;
-    line-height: 130%;
+.modalContent>div {
+    width: 340px;
+    line-height: 110%;
     position: relative;
-    margin: 5% auto;
+    margin: 3% auto;
     padding: 5px 20px 13px 20px;
     border-radius: 10px;
     background: #1A5B89;
     text-align: left;
     max-height: calc(100vh - 100px);
     overflow-y: auto;
-   }
-   
-   .close {
+}
+
+.close {
     color: #1A5B89 !important;
     background: aliceblue;
     line-height: 25px;
     position: relative;
-    right: -315px;
+    right: -220px;
     text-align: center;
     top: -5px;
     width: 30px;
@@ -276,243 +288,300 @@ input:focus, button:focus, a:focus, img:focus, button:-moz-focusring,input:-moz-
     box-shadow: 1px 1px 3px #000;
     z-index: 99999;
     font-size: 16px;
-  }
 }
 
-.close::after, .close::before {
-  content: '-';
+@media screen and (min-width: 640px) {
+    .modalContent>div {
+        width: 400px;
+        height: 600px;
+        line-height: 130%;
+        position: relative;
+        margin: 5% auto;
+        padding: 5px 20px 13px 20px;
+        border-radius: 10px;
+        background: #1A5B89;
+        text-align: left;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+    }
+    .close {
+        color: #1A5B89 !important;
+        background: aliceblue;
+        line-height: 25px;
+        position: relative;
+        right: -315px;
+        text-align: center;
+        top: -5px;
+        width: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 20px;
+        box-shadow: 1px 1px 3px #000;
+        z-index: 99999;
+        font-size: 16px;
+    }
 }
 
-.close:hover  { 
-  color: aliceblue !important;
-  background: #1A5B89;
+.close::after,
+.close::before {
+    content: '-';
 }
 
-.pageModal h2{
-  text-align: center;
-  font-size: 24px;
+.close:hover {
+    color: aliceblue !important;
+    background: #1A5B89;
 }
 
+.pageModal h2 {
+    text-align: center;
+    font-size: 24px;
+}
 
 /*HT for custom radios/checks - https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3*/
 
 .showPassCheckBoxlabel {
-  margin-top: 4%;
-  margin-left: 2px;
-
+    margin-top: 4%;
+    margin-left: 2px;
 }
 
-.checkBx input[type='checkbox']  {
-  opacity: 0;
-}
-
-.checkBx label  {
-  position: relative;
-  display: inline-block;
-  padding-left: 22px;
-}
-
-.checkBx label::before  {
-  content: "";
-  display: inline-block;
-  height: 16px;
-  width: 16px;
-  border: 1px solid;   
-}
-
-.checkBx label::after {
-  content: "";
-  display: inline-block;
-  height: 16px;
-  width: 16px;
-  color: #7cdcde;
-  background-color: #7cdcde;
+.checkBx input[type='checkbox'] {
+    opacity: 0;
 }
 
 .checkBx label {
-  position: relative;
+    position: relative;
+    display: inline-block;
+    padding-left: 22px;
+}
+
+.checkBx label::before {
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border: 1px solid;
+}
+
+.checkBx label::after {
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    color: #7cdcde;
+    background-color: #7cdcde;
+}
+
+.checkBx label {
+    position: relative;
 }
 
 .checkBx label::before,
 .checkBx label::after {
-  position: absolute;
+    position: absolute;
 }
 
 /*Outer-box*/
+
 .checkBx label::before {
-  top: 3px;
-  left: 1px;
+    top: 3px;
+    left: 1px;
 }
 
 /*Checkmark*/
+
 .checkBx label::after {
-  left: 2px;
-  top: 4px;
+    left: 2px;
+    top: 4px;
 }
 
 /*Hide the checkmark by default*/
-.checkBx input[type="checkbox"] + label::after {
-  content: none;
+
+.checkBx input[type="checkbox"]+label::after {
+    content: none;
 }
+
 /*Unhide the checkmark on the checked state*/
-.checkBx input[type="checkbox"]:checked + label::after {
-  content: "";
+
+.checkBx input[type="checkbox"]:checked+label::after {
+    content: "";
 }
 
 /*Adding focus styles on the outer-box of the fake checkbox*/
-.checkBx input[type="checkbox"]:focus + label::before {
-  outline: 3px double aliceblue;
-}   
 
-
-.rdio input[type='radio']  {
-  opacity: 0;
+.checkBx input[type="checkbox"]:focus+label::before {
+    outline: 3px double aliceblue;
 }
 
-.rdio label  {
-  position: relative;
-  display: inline-block;
-  padding-left: 22px;
-}
-
-.rdio label::before  {
-  content: "";
-  display: inline-block;
-  height: 16px;
-  width: 16px;
-  border-radius: 10px;
-  border: 1px solid;   
-}
-
-.rdio label::after {
-  content: "";
-  display: inline-block;
-  height: 15px;
-  width: 15px;
-  border: 1px solid aliceblue;
-  border-radius: 10px;
-  color: #7cdcde;
-  background-color: #7cdcde;
+.rdio input[type='radio'] {
+    opacity: 0;
 }
 
 .rdio label {
-  position: relative;
+    position: relative;
+    display: inline-block;
+    padding-left: 22px;
+}
+
+.rdio label::before {
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.rdio label::after {
+    content: "";
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+    color: #7cdcde;
+    background-color: #7cdcde;
+}
+
+.rdio label {
+    position: relative;
 }
 
 .rdio label::before,
 .rdio label::after {
-  position: absolute;
+    position: absolute;
 }
 
 /*Outer-box*/
+
 .rdio label::before {
-  top: 3px;
-  left: 1px;
+    top: 3px;
+    left: 1px;
 }
 
 /*Checkmark*/
+
 .rdio label::after {
-  left: 2px;
-  top: 4px;
+    left: 2px;
+    top: 4px;
 }
 
 /*Hide the checkmark by default*/
-.rdio input[type="radio"] + label::after {
-  content: none;
+
+.rdio input[type="radio"]+label::after {
+    content: none;
 }
 
 /*Unhide the checkmark on the checked state*/
-.rdio input[type="radio"]:checked + label::after {
-  content: "";
+
+.rdio input[type="radio"]:checked+label::after {
+    content: "";
 }
 
 /*Adding focus styles on the outer-box of the fake checkbox*/
-.rdio input[type="radio"]:focus + label::before {
-  outline: 3px double aliceblue;
-}   
+
+.rdio input[type="radio"]:focus+label::before {
+    outline: 3px double aliceblue;
+}
 
 /* for veiwport adjusting background*/
+
 .bg {
-  background-image: url("world-background2.svg.png");
-
-
-  /* scaling */
-  width: 100%;
-  height: 100%;
-
-  /* position */
-  position: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  z-index: -1;
-
+    background-image: url("world-background2.svg.png");
+    /* scaling */
+    width: 100%;
+    height: 100%;
+    /* position */
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
-@media only screen and (min-width: 640px){
-  .passPhraseButton {
-    padding-right: 100px;
-    padding-left: 100px;
-  }
+@media only screen and (min-width: 640px) {
+    .passPhraseButton {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
-  
-  /*increases font size on smaller screens*/
-  * {
-    font-size: 105%;
-  }
-
-  /*hides lock image on smaller screens*/
-  .rightWhatDo  {
-    display: none;
-  }
-
-  .createPassLeft, .createPassCenter, .createPassRight  {
-    margin-top: 20px;
-  }
-
-/*moves pass/phrase options to the left to reduce wrapping on small screens */
-  .passOption, .passLength, .phraseLength, .phraseNumWords, .phraseOption {
-    margin-left: 5%;
-    font-size: 80% !important;
-  }
-
-  .showPassCheckBox  {
-    margin-top: 5px;
-    margin-left: 5px;
-    text-align: left;
-    left: -8px;
-    font-size: 90%;
-  }
-
-
-.showPassCheckBoxlabel {
-  margin-top: 1.5%;
-  margin-left: 2px;
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+    /*increases font size on smaller screens*/
+    * {
+        font-size: 102%;
+    }
+    /*hides lock image on smaller screens*/
+    .rightWhatDo {
+        display: none;
+    }
+    .createPassLeft,
+    .createPassCenter,
+    .createPassRight {
+        margin-top: 20px;
+    }
+    /*moves pass/phrase options to the left to reduce wrapping on small screens */
+    .passOption,
+    .passLength,
+    .phraseLength,
+    .phraseNumWords,
+    .phraseOption {
+        margin-left: 5%;
+        font-size: 80% !important;
+    }
+    .showPassCheckBox {
+        margin-top: 5px;
+        margin-left: 5px;
+        text-align: left;
+        left: -8px;
+        font-size: 90%;
+    }
+    .showPassCheckBoxlabel {
+        margin-top: 1.5%;
+        margin-left: 2px;
+    }
+    footer {
+        font-size: 12px;
+        padding-top: 45%;
+    }
 }
 
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    footer {
+        font-size: 12px;
+        padding-top: 25%;
+    }
 }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1023px)  {
-  
-  * {
-    font-size: 100%;
-  }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    * {
+        font-size: 100%;
+    }
+    .createPassLeft,
+    .createPassCenter,
+    .createPassRight {
+        margin-top: 20px;
+    }
+    .showPassCheckBox {
+        margin-top: 5px;
+        margin-left: 5px;
+        text-align: left;
+        left: -150px;
+    }
+    .noSpace {
+        margin-left: 10%;
+    }
+    footer {
+        padding-top: 20%;
+    }
+}
 
-  .createPassLeft, .createPassCenter, .createPassRight  {
-    margin-top: 20px;
-  }
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    footer {
+        padding-top: 12%;
+    }
+}
 
-  .showPassCheckBox  {
-    margin-top: 5px;
-    margin-left: 5px;
-    text-align: left;
-    left: -150px;
-  }
-
-  .noSpace  {
-    margin-left: 10%;
-  }
-
+@media only screen and (min-width: 1440px) {
+    footer {
+        padding-top: 20%;
+    }
 }

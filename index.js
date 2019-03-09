@@ -5,32 +5,32 @@ const RANDOMPASS = 'https://randomuser.me/api/';
 let hashed = null;
 let fiveSliced = null;
 
-$.getScript('SHA1.js', function(data)  {
-    return SHA1;
-  });
+$.getScript('SHA1.js', function (data) {
+  return SHA1;
+});
 
-$.getScript('checkPwned.js', function(data)  {
-    return sliceHash;
-  });
-  
+$.getScript('checkPwned.js', function (data) {
+  return sliceHash;
+});
+//initial start - make a choice to check a password or create new
 function getStarted() {
-      $('.js-infoBox').html(
-        `<span class='titleInfo' aria-live='polite'><h2>Make a selection below to either check a password against a database of known comprised passwords 
+  $('.js-infoBox').html(
+    `<span class='titleInfo' aria-live='polite'><h2>Make a selection below to either check a password against a database of known comprised passwords 
         or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
+  //click check existing flow
+  $('.js-checkPass').unbind().submit(function (event) {
+    event.preventDefault();
 
-      $('.js-checkPass').unbind().submit(function(event)   {
-       event.preventDefault();
-  
-       $('.js-toDo, .js-goodNewsBadNews, .js-thePassword').addClass('hidden');
-       $('.js-passBox, .js-passMagic').removeClass('hidden');
-      
-       $('.js-infoBox').html(
-        `<span class='titleInfo'><h2>Enter a password that you'd like to compare to a database of known compromised passwords! </h2></span>
+    $('.js-toDo, .js-goodNewsBadNews, .js-thePassword').addClass('hidden');
+    $('.js-passBox, .js-passMagic').removeClass('hidden');
+
+    $('.js-infoBox').html(
+      `<span class='titleInfo'><h2>Enter a password that you'd like to compare to a database of known compromised passwords! </h2></span>
         `);
-      
-       $('.js-passMagic').html(
-         `<form id='js-passMagicCheck' role='form' class='passMagicCheck js-passMagicCheck' aria-live='assertive' novalidate>
+
+    $('.js-passMagic').html(
+      `<form id='js-passMagicCheck' role='form' class='passMagicCheck js-passMagicCheck' aria-live='assertive' novalidate>
             <div class='passwordEntry' role='presentation'>
               <label class='passMagicCheckTitle' for='passCheckfield'>
                 Check your Password 
@@ -64,76 +64,76 @@ function getStarted() {
             </div>
         `);
 
+    //function that allows user to show password entered into check field
+    $('#showPassword').change(function () {
+      if ($(this).is(':checked')) {
+        $('.js-passCheckfield').attr('type', 'text');
+      }
+      else {
+        $('.js-passCheckfield').attr('type', 'password');
+      }
 
-         $('#showPassword').change(function()  {
-           if ($(this).is(':checked')) {
-             $('.js-passCheckfield').attr('type', 'text');
-           }
-           else{
-             $('.js-passCheckfield').attr('type', 'password');
-           }
- 
-         })
-     
-       listenForPass();
-      })
+    })
 
-    $('.js-newPass').unbind().submit(function(event)   {
-        event.preventDefault();
-   
-        $('.js-toDo, .js-goodNewsBadNews, .js-thePassword').addClass('hidden');
-        $('.js-passBox, .js-passMagic').removeClass('hidden');
-        $('.js-infoBox').html(
-          `<span class='titleInfo'><h2>Do you want a password or a passphrase?</h2>
+    listenForPass();
+  })
+  //create new password flow
+  $('.js-newPass').unbind().submit(function (event) {
+    event.preventDefault();
+
+    $('.js-toDo, .js-goodNewsBadNews, .js-thePassword').addClass('hidden');
+    $('.js-passBox, .js-passMagic').removeClass('hidden');
+    $('.js-infoBox').html(
+      `<span class='titleInfo'><h2>Do you want a password or a passphrase?</h2>
           </span>
           `);
-        $('.js-passMagic').html(
-          `<form id='js-selectPass' role='form' class='selectPass js-selectPass'>
+    $('.js-passMagic').html(
+      `<form id='js-selectPass' role='form' class='selectPass js-selectPass'>
             <label class='newPassTitle'>Select a password type below!</label>
             <br>
-            <button type='submit'  class='bt20 createNewPass js-createNewPass'>Create a Password</button>  OR 
+            <button type='submit'  class='bt20 createNewPass js-createNewPass'>Create a Password</button>   
             <button type='submit'  class='bt20 createNewPhrase js-createNewPhrase'>Create a Passphrase</button>  
           </form>
           <br>
           <span><a href='https://en.wikipedia.org/wiki/Passphrase' target='_blank'>What is a Passphrase?</a></span>
           `);
-   
-       selectYourType() 
-       })
-     
+
+    selectYourType()
+  })
+
 }
+//select password or passphrase
+function selectYourType() {
 
-function selectYourType()   {
-  
-  $('.js-createNewPass').unbind().click(function(event)  {
-        event.preventDefault();
+  $('.js-createNewPass').unbind().click(function (event) {
+    event.preventDefault();
 
-        $('.js-newPass').addClass('hidden');
+    $('.js-newPass').addClass('hidden');
 
-        newPassOptions()
+    newPassOptions()
 
-    }); 
+  });
 
-    $('.js-createNewPhrase').unbind().click(function(event)  {
-        event.preventDefault();
+  $('.js-createNewPhrase').unbind().click(function (event) {
+    event.preventDefault();
 
-        $('.js-newPass').addClass('hidden');
-        
-        newPhraseOptions();
-    });
-  }
+    $('.js-newPass').addClass('hidden');
 
-function displayResults(match)  {
+    newPhraseOptions();
+  });
+}
+//display results to user if password found in compromised DB or not found
+function displayResults(match) {
 
-    if (match > 0)  {
-      $('.js-passMagic').addClass('hidden');
-      $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
-      $('.js-infoBox').html(
-        `<span class='titleInfo' role='Presentation'><h2>Make a selection below to either check a password against a database of known comprised passwords 
+  if (match > 0) {
+    $('.js-passMagic').addClass('hidden');
+    $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
+    $('.js-infoBox').html(
+      `<span class='titleInfo' role='Presentation'><h2>Make a selection below to either check a password against a database of known comprised passwords 
         or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
-      $('.js-goodNewsBadNews').html(
-        `<h2  class='warning' aria-live='assertive'>WARNING!</h2>
+    $('.js-goodNewsBadNews').html(
+      `<h2  class='warning' aria-live='assertive'>WARNING!</h2>
           <br>
           <p>We're sorry to inform you that the password <span class='emph'>WAS</span> found in a database of compromised passwords.</p>
           <br>
@@ -141,17 +141,17 @@ function displayResults(match)  {
           If you are seeing this message you may want to consider creating a new secure password or passphrase.</p>
           <br>
         `);
-    }
-    
-    else  {
-      $('.js-passMagic').addClass('hidden');
-      $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
-      $('.js-infoBox').html(
-        `<span class='titleInfo' role='Presentation'><h2>Make a selection below to either check a password against a database of known comprised passwords 
+  }
+
+  else {
+    $('.js-passMagic').addClass('hidden');
+    $('.js-goodNewsBadNews, .js-toDo, .js-newPass').removeClass('hidden');
+    $('.js-infoBox').html(
+      `<span class='titleInfo' role='Presentation'><h2>Make a selection below to either check a password against a database of known comprised passwords 
         or to generate a <span class='emph'>secure</span> password or passphrase.</h2></span>
         `);
-      $('.js-goodNewsBadNews').html(
-        `<h2 class='goodNews'  aria-live='assertive'>GOOD NEWS!</h2>
+    $('.js-goodNewsBadNews').html(
+      `<h2 class='goodNews'  aria-live='assertive'>GOOD NEWS!</h2>
         <br>
         <p>The generated data was <span class='emph'>NOT</span> found in a database of compromised passwords.</p>
         <br>
@@ -161,8 +161,8 @@ function displayResults(match)  {
         Click below to check another password or generate a new one!</p>
         <br>
         `);
-    }
   }
- 
+}
+
 
 $(getStarted);
